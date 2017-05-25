@@ -17,5 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
+        toolbar.setSubtitle("EFG Detmold West");
     }
 }
