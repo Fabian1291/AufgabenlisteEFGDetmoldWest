@@ -4,6 +4,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,5 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         setupViewPager (viewPager);
+    }
+
+    private void setupViewPager (ViewPager viewPager)
+    {
+        ViewPagerAdapter adapter = new ViewPagerAdapter (getSupportFragmentManager());
+        adapter.addFragment (new OneFragment(), "Aufgaben");
+        viewPager.setAdapter(adapter);
     }
 }
