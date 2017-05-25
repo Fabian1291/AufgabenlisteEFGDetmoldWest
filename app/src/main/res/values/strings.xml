@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Aufgabenliste</string>
+    <string name="Overflow_Info">Info</string>
 </resources>
