@@ -8,4 +8,6 @@
     <color name="colorSecondary">#bf360c</color>
     <color name="colorSecondaryDark">#870000</color>
     <color name="colorSecondaryLight">#f9683a</color>
+
+    <color name="windowBackground">#ffffff</color>
 </resources>
