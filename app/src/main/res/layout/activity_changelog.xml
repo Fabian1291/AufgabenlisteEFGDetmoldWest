@@ -14,7 +14,6 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="0dp"
         app:layout_constraintRight_toRightOf="parent">
 
         <android.support.v7.widget.Toolbar
@@ -26,6 +25,170 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Alpha 0.4.0-5"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=" -Priorität hinzugefügt\n
+-Versionsnummerierung geändert\n
+-Aufgaben werden in ListView angezeigt\n
+-Prioritäten hinzugefügt\n
+-Google Account Name als Ersteller und Erlediger\n
+-Datum für Erstellung einer Aufgabe hinzugefügt\n
+-Datum für das Erledigen einer Aufgabe hinzugefügt\n
+-Seite Erledigt entfernt\n
+-Erledigt und Priorität in List View hinzugefügt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Alpha 0.03"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=" -Scroll View in Version hinzugefügt\n
+-Zeilenumbruch zu den Einträgen im Changelog hinzugefügt\n
+-Aussehen der Tags geändert\n
+-Button zum Aufgabe hinzufügen hinzugefügt\n
+-Im Overflow Button Aufgabe hinzufügen entfernt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="Alpha 0.02"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=" -Datenbank hinzugefügt\n
+-Overflow Button hinzugefügt\n
+-Version zum Overflow Button hinzugefügt\n
+-Aufgabe hinzufügen zum Overflow Button hinzugefügt\n
+-Changelog hinzugefügt\n
+-Plus Button entfernt\n
+-List View hinzugefügt\n
+-Text View für Aufgaben entfernt\n
+-Button Fertig auf activity_main entfernt\n
+-Ersteller in Aufgabe hinzufügen hinzugefügt\n
+-Abfrage, ob Felder Aufgabe, Ort und Ersteller in Aufgabe hinzufügen ausgefüllt sind hinzugefügt\n
+-Feld erledigt von in Aufgaben hinzugefügt\n
+-Button Erledigt in Aufgaben hinzugefügt\n
+-Abfage, ob Feld erledigt von in Aufgaben hinzugefügt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Alpha 0.01"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text=" -Seite activity_main hinzugefügt\n
+-Seite activity_aufgaben hinzugefügt\n
+-Seite acitvity_hinzufügen hinzugefügt\n
+-Auf activity_main eine toolbar erstellt\n
+-zurück Button auf toolbar erstellt\n
+-Untertitel zur toolbar hinzugefügt\n
+-Plus Button hinzugefügt und Intent zur Seite activity_hinzufügen hinzugefügt\n
+-TabWidget auf activity_main erstellt\n
+-Tab1 in Aufgaben geändert\n
+-Tab2 in Erledigt geändert\n
+-in Tab1 TextView für aufgabe hinzugefügt\n
+-Intent von TextView zur Seite activity_aufgaben hinzugefügt\n
+-in Tab1 Button Fertig hinzugefügt\n
+-Variablen von activity_hinzufügen zu activity_main weitergeleitet\n
+-Variablen von TextView zu activity_aufgaben weitergeleitet\n
+-Felder Aufgabe, Ort, Beschreibung in activity_aufgaben hinzugefügt"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    </LinearLayout>
+
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>
