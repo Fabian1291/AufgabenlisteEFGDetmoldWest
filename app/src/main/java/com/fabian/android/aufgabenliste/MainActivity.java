@@ -2,6 +2,7 @@ package com.fabian.android.aufgabenliste;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -14,30 +15,35 @@ import android.view.MenuItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity
+{
     private Toolbar toolbar;
     private ViewPager viewPager;
+    private TabLayout tabLayout;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected void onCreate (Bundle savedInstanceState)
+    {
+        super.onCreate (savedInstanceState);
+        setContentView (R.layout.activity_main);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        toolbar = (Toolbar) findViewById (R.id.toolbar);
+        setSupportActionBar (toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled (false);
 
         toolbar.setSubtitle(R.string.Untertitel);
 
-        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        viewPager = (ViewPager) findViewById (R.id.viewPager);
         setupViewPager (viewPager);
+
+        tabLayout = (TabLayout) findViewById (R.id.tabs);
+        tabLayout.setupWithViewPager (viewPager);
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
+    public boolean onOptionsItemSelected (MenuItem item)
+    {
         switch (item.getItemId()) {
             case R.id.action_version:
                 Intent intent = new Intent (this, Version.class);
