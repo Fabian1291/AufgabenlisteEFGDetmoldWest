@@ -9,5 +9,12 @@
         android:title="@string/Overflow_Version"
         android:visible="true"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_changelog"
+        android:title="Changelog"
+        android:checkable="false"
+        android:enabled="true"
+        android:visible="true"
+        app:showAsAction="never"/>
 
 </menu>
