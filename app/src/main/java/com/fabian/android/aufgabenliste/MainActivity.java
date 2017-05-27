@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
-        toolbar.setSubtitle("EFG Detmold West");
+        toolbar.setSubtitle(R.string.Untertitel);
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         setupViewPager (viewPager);

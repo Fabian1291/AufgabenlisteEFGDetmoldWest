@@ -16,7 +16,7 @@ public class Version extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
         setSupportActionBar (toolbar);
-        toolbar.setSubtitle ("EFG Detmold West");
+        toolbar.setSubtitle (R.string.Untertitel);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled (true);
     }
