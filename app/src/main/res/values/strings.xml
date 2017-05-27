@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Aufgabenliste</string>
     <string name="Overflow_Version">Version</string>
+    <string name="Untertitel">EFG Detmold West</string>
 
     <string name="Version">Alpha 0.5.0-1</string>
 </resources>
