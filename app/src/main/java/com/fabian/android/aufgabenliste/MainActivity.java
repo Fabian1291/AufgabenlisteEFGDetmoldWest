@@ -40,8 +40,12 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_version:
-                Intent intent = new Intent(this, Version.class);
-                startActivity(intent);
+                Intent intent = new Intent (this, Version.class);
+                startActivity (intent);
+                return true;
+            case R.id.action_changelog:
+                Intent intent1 = new Intent (this, Changelog.class);
+                startActivity (intent1);
                 return true;
         }
 
