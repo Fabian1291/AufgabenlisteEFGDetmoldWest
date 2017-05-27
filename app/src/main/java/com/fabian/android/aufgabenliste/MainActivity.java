@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     {
         ViewPagerAdapter adapter = new ViewPagerAdapter (getSupportFragmentManager());
         adapter.addFragment (new FragmentOne(), "Aufgaben");
+        adapter.addFragment (new FragemntTwo(), "Erledigt");
         viewPager.setAdapter(adapter);
     }
 
