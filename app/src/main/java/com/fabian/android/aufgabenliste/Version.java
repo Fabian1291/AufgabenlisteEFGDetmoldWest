@@ -1,8 +1,23 @@
 package com.fabian.android.aufgabenliste;
 
-/**
- * Created by root on 27.05.17.
- */
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
-public class Version {
+public class Version extends AppCompatActivity
+{
+    Toolbar toolbar;
+
+    @Override
+    protected void onCreate (Bundle savedInstancesState)
+    {
+        super.onCreate (savedInstancesState);
+        setContentView (R.layout.activity_version);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
+        setSupportActionBar (toolbar);
+        toolbar.setSubtitle ("EFG Detmold West");
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled (true);
+    }
 }
