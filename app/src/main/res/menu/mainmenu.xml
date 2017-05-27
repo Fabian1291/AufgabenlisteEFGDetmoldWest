@@ -6,7 +6,7 @@
         android:id="@+id/action_version"
         android:checkable="false"
         android:enabled="true"
-        android:title="@string/Overflow_Info"
+        android:title="@string/Overflow_Version"
         android:visible="true"
         app:showAsAction="never" />
 
