@@ -2,6 +2,7 @@ package com.fabian.android.aufgabenliste;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +41,16 @@ public class MainActivity extends AppCompatActivity
 
         tabLayout = (TabLayout) findViewById (R.id.tabs);
         tabLayout.setupWithViewPager (viewPager);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById (R.id.fab);
+        fab.setOnClickListener (new View.OnClickListener()
+        {
+            @Override
+            public void onClick( View view) {
+                Intent intent = new Intent (MainActivity.this, Hinzufuegen.class);
+                startActivity (intent);
+            }
+        });
     }
 
     @Override
