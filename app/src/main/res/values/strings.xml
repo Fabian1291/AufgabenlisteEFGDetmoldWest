@@ -4,4 +4,6 @@
     <string name="Untertitel">EFG Detmold West</string>
 
     <string name="Version">Alpha 0.5.0-5</string>
+
+    <string name="marginNormal">8dp</string>
 </resources>
