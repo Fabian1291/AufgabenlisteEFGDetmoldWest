@@ -33,8 +33,8 @@
         android:layout_height="wrap_content"
         android:text="Version: "
         app:layout_constraintTop_toBottomOf="@+id/appbar"
-        android:layout_marginTop="@string/marginNormal"
-        android:layout_marginLeft="@string/marginNormal"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:layout_marginLeft="@dimen/marginNormal"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
@@ -49,8 +49,8 @@
         android:id="@+id/textViewErsteller"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@string/marginNormal"
-        android:layout_marginTop="@string/marginNormal"
+        android:layout_marginLeft="@dimen/marginNormal"
+        android:layout_marginTop="@dimen/marginNormal"
         android:text="Erstellt von Fabian Dollas"
         app:layout_constraintTop_toBottomOf="@+id/Version"
         app:layout_constraintLeft_toLeftOf="parent"/>
@@ -58,8 +58,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@string/marginNormal"
-        android:layout_marginTop="@string/marginNormal"
+        android:layout_marginLeft="@dimen/marginNormal"
+        android:layout_marginTop="@dimen/marginNormal"
         android:text="27.05.2017"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewErsteller"/>
