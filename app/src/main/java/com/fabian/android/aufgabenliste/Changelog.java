@@ -16,7 +16,7 @@ public class Changelog extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
         setSupportActionBar (toolbar);
-        toolbar.setSubtitle (R.string.Untertitel);
+        toolbar.setTitle ("Changelog");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled (true);
     }
