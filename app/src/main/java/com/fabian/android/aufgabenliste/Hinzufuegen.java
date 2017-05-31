@@ -16,7 +16,7 @@ public class Hinzufuegen extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById (R.id.toolbarHinzufuegen);
         setSupportActionBar (toolbar);
-        toolbar.setSubtitle (R.string.Untertitel);
+        toolbar.setTitle("Aufgabe Hinzufügen");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
