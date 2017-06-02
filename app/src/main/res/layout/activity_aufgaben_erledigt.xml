@@ -44,7 +44,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/appbarAufgabenErledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewAufgabe"
+        app:layout_constraintLeft_toRightOf="@+id/textViewAufgabe_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
@@ -145,6 +145,46 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung_erledigt"
         app:layout_constraintLeft_toRightOf="@+id/textViewErsteller_erledigt"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="@dimen/marginNormal" />
+
+    <TextView
+        android:id="@+id/textViewErlediger_erledigt"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Erledigt von: "
+        app:layout_constraintTop_toBottomOf="@+id/textViewErsteller_erledigt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="@dimen/marginNormal"/>
+
+    <TextView
+        android:id="@+id/textViewErlediger1_erledigt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewErsteller_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewErlediger_erledigt"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="@dimen/marginNormal" />
+
+    <TextView
+        android:id="@+id/textViewDatum2_erledigt"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Datum: "
+        app:layout_constraintTop_toBottomOf="@+id/textViewErlediger_erledigt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="@dimen/marginNormal"/>
+
+    <TextView
+        android:id="@+id/textViewDatum3_erledigt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewErlediger_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewDatum2_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
