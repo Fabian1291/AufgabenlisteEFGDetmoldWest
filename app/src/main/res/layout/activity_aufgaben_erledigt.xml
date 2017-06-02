@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbarAufgaben"
+        android:id="@+id/appbarAufgabenErledigt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarAufgaben"
+            android:id="@+id/toolbarAufgabenErledigt"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
@@ -30,121 +30,121 @@
     </android.support.design.widget.AppBarLayout>
 
     <TextView
-        android:id="@+id/textViewAufgabe"
+        android:id="@+id/textViewAufgabe_erledigt"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Aufgabe: "
-        app:layout_constraintTop_toBottomOf="@+id/appbarAufgaben"
+        app:layout_constraintTop_toBottomOf="@+id/appbarAufgabenErledigt"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal"/>
 
     <TextView
-        android:id="@+id/textViewAufgabe1"
+        android:id="@+id/textViewAufgabe1_erledigt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/appbarAufgaben"
+        app:layout_constraintTop_toBottomOf="@+id/appbarAufgabenErledigt"
         app:layout_constraintLeft_toRightOf="@+id/textViewAufgabe"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
 
     <TextView
-        android:id="@+id/textViewDatum"
+        android:id="@+id/textViewDatum_erledigt"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Datum: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe_erledigt"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal"/>
 
     <TextView
-        android:id="@+id/textViewDatum1"
+        android:id="@+id/textViewDatum1_erledigt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe"
-        app:layout_constraintLeft_toRightOf="@+id/textViewDatum"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewDatum_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
 
     <TextView
-        android:id="@+id/textViewPrioritaet"
+        android:id="@+id/textViewPrioritaet_erledigt"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Priorität: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDatum_erledigt"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal"/>
 
     <TextView
-        android:id="@+id/textViewPrioritaet1"
+        android:id="@+id/textViewPrioritaet1_erledigt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum"
-        app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDatum_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
 
     <TextView
-        android:id="@+id/textViewOrt"
+        android:id="@+id/textViewOrt_erledigt"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Ort: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet_erledigt"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal"/>
 
     <TextView
-        android:id="@+id/textViewOrt1"
+        android:id="@+id/textViewOrt1_erledigt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet"
-        app:layout_constraintLeft_toRightOf="@+id/textViewOrt"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewOrt_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
 
     <TextView
-        android:id="@+id/textViewBeschreibung"
+        android:id="@+id/textViewBeschreibung_erledigt"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Beschreibung: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewOrt"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOrt_erledigt"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
 
     <TextView
-        android:id="@+id/textViewBeschreibung1"
+        android:id="@+id/textViewBeschreibung1_erledigt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewOrt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewBeschreibung"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOrt_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewBeschreibung_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
 
     <TextView
-        android:id="@+id/textViewErsteller"
+        android:id="@+id/textViewErsteller_erledigt"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Ersteller: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung_erledigt"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal"/>
 
     <TextView
-        android:id="@+id/textViewErsteller1"
+        android:id="@+id/textViewErsteller1_erledigt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung"
-        app:layout_constraintLeft_toRightOf="@+id/textViewErsteller"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewErsteller_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
