@@ -12,6 +12,8 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     private static final int VERSION = 1;
     private static final String TABLE_NAME = "Aufgebenliste";
 
+    public final String ID_COLUMN = "_id";
+
     private AufgabenlisteDatabase (final Context context) {super(context, DB_NAME, null, VERSION);}
 
     public static AufgabenlisteDatabase getInstance (final Context context)
@@ -22,6 +24,13 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         }
 
         return INSTANCE;
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+        String createQuery = "CREATE TABLE " + TABLE_NAME + " (" + ID_COLUMN + " INTEGER PRIMARY KEY, )";
+
+        sqLiteDatabase.execSQL(createQuery);
     }
 
     @Override
