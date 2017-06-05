@@ -13,6 +13,15 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     private static final String TABLE_NAME = "Aufgebenliste";
 
     public final String ID_COLUMN = "_id";
+    public final String AUFGABE_COLUMN = "Aufgabe";
+    public final String DATUM_COLUMN = "Datum";
+    public final String ORT_COLUMN = "Ort";
+    public final String ERSTELLER_COLUMN = "Ersteller";
+    public final int PRIORITAET_COLUMN = 0;
+    public final String BESCHREIBUNG_COLUMN = "Beschreibung";
+    public final int ERLEDIGT_COLUMN = 0;
+    public final String ERLEDIGER_COLUMN = "Erlediger";
+    public final String DATUM_ERLEDIGT_COLUMN = "DatumErledigt";
 
     private AufgabenlisteDatabase (final Context context) {super(context, DB_NAME, null, VERSION);}
 
