@@ -1,8 +1,11 @@
 package com.fabian.android.aufgabenliste.database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.fabian.android.aufgabenliste.model.Aufgabe;
 
 public class AufgabenlisteDatabase extends SQLiteOpenHelper
 {
@@ -59,5 +62,20 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         sqLiteDatabase.execSQL (dropTable);
 
         onCreate (sqLiteDatabase);
+    }
+
+    public Aufgabe createAufgabe (final Aufgabe todo)
+    {
+        SQLiteDatabase database = this.getWritableDatabase ();
+
+        ContentValues values = new ContentValues ();
+        values.put(AUFGABE_COLUMN, todo.getAufgabe ());
+        values.put(DATUM_COLUMN, todo.getDatum () == null ? null : todo.getDatum ().getTimeInMillis () / 1000);
+
+        long newId = database.insert (TABLE_NAME, null, values);
+
+        database.close();
+
+        return readToDo (newId);
     }
 }
