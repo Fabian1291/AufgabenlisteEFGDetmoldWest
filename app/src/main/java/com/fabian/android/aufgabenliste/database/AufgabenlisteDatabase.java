@@ -1,8 +1,25 @@
 package com.fabian.android.aufgabenliste.database;
 
-/**
- * Created by root on 05.06.17.
- */
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
 
-public class AufgabenlisteDatabase {
+public class AufgabenlisteDatabase extends SQLiteOpenHelper
+{
+    public static AufgabenlisteDatabase INSTANCE = null;
+
+    private static final String DB_NAME = "AUFGABENLISTE";
+    private static final int VERSION = 1;
+
+    private AufgabenlisteDatabase (final Context context) {super(context, DB_NAME, null, VERSION);}
+
+    public static AufgabenlisteDatabase getInstance (final Context context)
+    {
+        if (INSTANCE == null)
+        {
+            INSTANCE = new AufgabenlisteDatabase (context);
+        }
+
+        return INSTANCE;
+    }
 }
