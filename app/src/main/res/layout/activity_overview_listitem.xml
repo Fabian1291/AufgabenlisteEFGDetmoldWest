@@ -37,4 +37,5 @@
         android:layout_alignParentRight="true"
         android:layout_margin="15dp"
         android:text="TextView" />
+
 </RelativeLayout>
