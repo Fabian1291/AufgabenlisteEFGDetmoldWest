@@ -14,4 +14,12 @@ public class Aufgabe
     private int Erledigt;
     private String Erlediger;
     private Calendar DatumErledigt;
+
+    public Aufgabe (final String Aufgabe) {this (Aufgabe, null); }
+
+    public Aufgabe (String Aufgabe, Calendar Datum)
+    {
+        this.Aufgabe = Aufgabe;
+        this.Datum = Datum;
+    }
 }
