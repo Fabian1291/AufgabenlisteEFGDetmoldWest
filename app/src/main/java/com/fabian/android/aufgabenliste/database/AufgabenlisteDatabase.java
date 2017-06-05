@@ -2,10 +2,13 @@ package com.fabian.android.aufgabenliste.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.fabian.android.aufgabenliste.model.Aufgabe;
+
+import java.util.Calendar;
 
 public class AufgabenlisteDatabase extends SQLiteOpenHelper
 {
@@ -80,6 +83,36 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
 
         database.close();
 
-        return readToDo (newId);
+        return readAufgabe (newId);
     }
+
+    public Aufgabe readAufgabe (final long id)
+    {
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, String.valueOf(PRIORITAET_COLUMN), BESCHREIBUNG_COLUMN},ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+
+        Aufgabe aufgabe = null;
+
+        if (cursor != null && cursor.getCount() > 0)
+        {
+            cursor.moveToFirst();
+            aufgabe = new Aufgabe(cursor.getString(cursor.getColumnIndex (AUFGABE_COLUMN)));
+            aufgabe.setId(cursor.getLong(cursor.getColumnIndex (ID_COLUMN)));
+
+            Calendar calendar = null;
+
+            if (cursor.isNull(cursor.getColumnIndex (DATUM_COLUMN)))
+            {
+                calendar = Calendar.getInstance();
+                calendar.setTimeInMillis(cursor.getInt(cursor.getColumnIndex (DATUM_COLUMN)) * 1000);
+            }
+
+            aufgabe.setDatum (calendar);
+        }
+
+        database.close();
+
+        return aufgabe;
+    }
+
 }
