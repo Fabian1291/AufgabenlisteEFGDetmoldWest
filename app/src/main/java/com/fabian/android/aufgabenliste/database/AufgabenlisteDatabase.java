@@ -64,13 +64,17 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         onCreate (sqLiteDatabase);
     }
 
-    public Aufgabe createAufgabe (final Aufgabe todo)
+    public Aufgabe createAufgabe (final Aufgabe aufgabe)
     {
         SQLiteDatabase database = this.getWritableDatabase ();
 
         ContentValues values = new ContentValues ();
-        values.put(AUFGABE_COLUMN, todo.getAufgabe ());
-        values.put(DATUM_COLUMN, todo.getDatum () == null ? null : todo.getDatum ().getTimeInMillis () / 1000);
+        values.put (AUFGABE_COLUMN, aufgabe.getAufgabe ());
+        values.put (DATUM_COLUMN, aufgabe.getDatum () == null ? null : aufgabe.getDatum ().getTimeInMillis () / 1000);
+        values.put (ORT_COLUMN, aufgabe.getOrt ());
+        values.put (ERSTELLER_COLUMN, aufgabe.getErsteller ());
+        values.put (String.valueOf(PRIORITAET_COLUMN), aufgabe.getPrioritaet ());
+        values.put (BESCHREIBUNG_COLUMN, aufgabe.getBeschreibung());
 
         long newId = database.insert (TABLE_NAME, null, values);
 
