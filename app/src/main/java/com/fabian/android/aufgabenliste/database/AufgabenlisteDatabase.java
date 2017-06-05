@@ -10,6 +10,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
 
     private static final String DB_NAME = "AUFGABENLISTE";
     private static final int VERSION = 1;
+    private static final String TABLE_NAME = "Aufgebenliste";
 
     private AufgabenlisteDatabase (final Context context) {super(context, DB_NAME, null, VERSION);}
 
@@ -21,5 +22,14 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         }
 
         return INSTANCE;
+    }
+
+    @Override
+    public void onUpgrade (SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion)
+    {
+        String dropTable = "DROP TABLE IF EXISTS" + TABLE_NAME;
+        sqLiteDatabase.execSQL (dropTable);
+
+        onCreate (sqLiteDatabase);
     }
 }
