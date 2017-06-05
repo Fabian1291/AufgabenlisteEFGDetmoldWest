@@ -22,4 +22,84 @@ public class Aufgabe
         this.Aufgabe = Aufgabe;
         this.Datum = Datum;
     }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getAufgabe() {
+        return Aufgabe;
+    }
+
+    public void setAufgabe(String aufgabe) {
+        Aufgabe = aufgabe;
+    }
+
+    public Calendar getDatum() {
+        return Datum;
+    }
+
+    public void setDatum(Calendar datum) {
+        Datum = datum;
+    }
+
+    public String getOrt() {
+        return Ort;
+    }
+
+    public void setOrt(String ort) {
+        Ort = ort;
+    }
+
+    public String getErsteller() {
+        return Ersteller;
+    }
+
+    public void setErsteller(String ersteller) {
+        Ersteller = ersteller;
+    }
+
+    public int getPrioritaet() {
+        return Prioritaet;
+    }
+
+    public void setPrioritaet(int prioritaet) {
+        Prioritaet = prioritaet;
+    }
+
+    public String getBeschreibung() {
+        return Beschreibung;
+    }
+
+    public void setBeschreibung(String beschreibung) {
+        Beschreibung = beschreibung;
+    }
+
+    public int getErledigt() {
+        return Erledigt;
+    }
+
+    public void setErledigt(int erledigt) {
+        Erledigt = erledigt;
+    }
+
+    public String getErlediger() {
+        return Erlediger;
+    }
+
+    public void setErlediger(String erlediger) {
+        Erlediger = erlediger;
+    }
+
+    public Calendar getDatumErledigt() {
+        return DatumErledigt;
+    }
+
+    public void setDatumErledigt(Calendar datumErledigt) {
+        DatumErledigt = datumErledigt;
+    }
 }
