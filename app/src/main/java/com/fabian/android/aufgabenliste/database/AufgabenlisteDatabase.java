@@ -8,7 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.fabian.android.aufgabenliste.model.Aufgabe;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class AufgabenlisteDatabase extends SQLiteOpenHelper
 {
@@ -113,6 +115,29 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         database.close();
 
         return aufgabe;
+    }
+
+    public List<Aufgabe> readAllAufgaben ()
+    {
+        List<Aufgabe> todos = new ArrayList<>();
+        SQLiteDatabase database = this.getReadableDatabase ();
+
+        Cursor cursor = database.rawQuery ("SELECT * FROM " + TABLE_NAME, null);
+
+        if(cursor.moveToFirst())
+        {
+            do{
+                Aufgabe aufgabe = readAufgabe (cursor.getLong(cursor.getColumnIndex (ID_COLUMN)));
+                if (aufgabe != null)
+                {
+                    todos.add (aufgabe);
+                }
+            }while (cursor.moveToNext());
+        }
+
+        database.close ();
+
+        return todos;
     }
 
 }
