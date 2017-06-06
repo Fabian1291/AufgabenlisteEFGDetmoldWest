@@ -28,7 +28,7 @@ public class AufgabenlisteAdapter extends CursorAdapter
     @Override
     public void bindView (final View view, final Context context, final Cursor cursor)
     {
-        ((TextView) view.findViewById (R.id.listitemAufgabe)).setText (cursor.getString(cursor.getColumnIndex (AufgabenlisteDatabase.AUFGABE_COLUMN)));
+        ((TextView) view.findViewById (R.id.listitemAufgabe)).setText (cursor.getString (cursor.getColumnIndex (AufgabenlisteDatabase.AUFGABE_COLUMN)));
 
         TextView dueDate = (TextView) view.findViewById (R.id.listitemDatum);
 
@@ -39,7 +39,7 @@ public class AufgabenlisteAdapter extends CursorAdapter
         else {
             dueDate.setVisibility (View.VISIBLE);
             Calendar calendar = Calendar.getInstance ();
-            calendar.setTimeInMillis (cursor.getInt(cursor.getColumnIndex (AufgabenlisteDatabase.DATUM_COLUMN)) * 1000);
+            calendar.setTimeInMillis (cursor.getInt (cursor.getColumnIndex (AufgabenlisteDatabase.DATUM_COLUMN)) * 1000);
             dueDate.setText (String.valueOf (calendar.get (Calendar.YEAR)));
         }
     }
