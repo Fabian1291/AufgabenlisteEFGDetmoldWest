@@ -17,7 +17,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public static AufgabenlisteDatabase INSTANCE = null;
 
     private static final String DB_NAME = "AUFGABENLISTE";
-    private static final int VERSION = 1;
+    private static final int VERSION = 2;
     private static final String TABLE_NAME = "Aufgabenliste";
 
     public static final String ID_COLUMN = "_id";
@@ -44,7 +44,8 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     }
 
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
+    public void onCreate (SQLiteDatabase sqLiteDatabase)
+    {
         String createQuery = "CREATE TABLE " + TABLE_NAME +
                 " (" + ID_COLUMN + " INTEGER PRIMARY KEY, " +
                 AUFGABE_COLUMN + " TEXT NOT NULL, " +
@@ -57,7 +58,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
                 ERLEDIGER_COLUMN + " TEXT NOT NULL, " +
                 DATUM_ERLEDIGT_COLUMN + " TEXT NOT NULL )";
 
-        sqLiteDatabase.execSQL(createQuery);
+        sqLiteDatabase.execSQL (createQuery);
     }
 
     @Override
