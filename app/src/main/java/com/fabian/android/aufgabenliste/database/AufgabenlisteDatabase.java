@@ -25,9 +25,9 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public static final String DATUM_COLUMN = "Datum";
     public static final String ORT_COLUMN = "Ort";
     public static final String ERSTELLER_COLUMN = "Ersteller";
-    public static final int PRIORITAET_COLUMN = 0;
+    public static final String PRIORITAET_COLUMN = "Prioritaet";
     public static final String BESCHREIBUNG_COLUMN = "Beschreibung";
-    public static final int ERLEDIGT_COLUMN = 0;
+    public static final String ERLEDIGT_COLUMN = "Erledigt";
     public static final String ERLEDIGER_COLUMN = "Erlediger";
     public static final String DATUM_ERLEDIGT_COLUMN = "DatumErledigt";
 
