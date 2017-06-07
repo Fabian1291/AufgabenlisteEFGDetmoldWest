@@ -29,6 +29,6 @@ public class AufgabenlisteAdapter extends CursorAdapter
     public void bindView (final View view, final Context context, final Cursor cursor)
     {
         ((TextView) view.findViewById (R.id.listitemAufgabe)).setText (cursor.getString (cursor.getColumnIndex (AufgabenlisteDatabase.AUFGABE_COLUMN)));
-
+        ((TextView) view.findViewById (R.id.listitemDatum)).setText (cursor.getString (cursor.getColumnIndex (AufgabenlisteDatabase.DATUM_COLUMN)));
     }
 }
