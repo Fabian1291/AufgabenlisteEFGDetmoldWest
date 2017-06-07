@@ -30,17 +30,5 @@ public class AufgabenlisteAdapter extends CursorAdapter
     {
         ((TextView) view.findViewById (R.id.listitemAufgabe)).setText (cursor.getString (cursor.getColumnIndex (AufgabenlisteDatabase.AUFGABE_COLUMN)));
 
-        TextView dueDate = (TextView) view.findViewById (R.id.listitemDatum);
-
-        if (cursor.isNull(cursor.getColumnIndex (AufgabenlisteDatabase.DATUM_COLUMN)))
-        {
-            dueDate.setVisibility(View.GONE);
-        }
-        else {
-            dueDate.setVisibility (View.VISIBLE);
-            Calendar calendar = Calendar.getInstance ();
-            calendar.setTimeInMillis (cursor.getInt (cursor.getColumnIndex (AufgabenlisteDatabase.DATUM_COLUMN)) * 1000);
-            dueDate.setText (String.valueOf (calendar.get (Calendar.YEAR)));
-        }
     }
 }
