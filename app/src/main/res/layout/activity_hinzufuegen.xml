@@ -30,7 +30,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.inputmethodservice.ExtractEditText
+    <EditText
         android:id="@+id/editTextAufgabe"
         android:layout_width="0dp"
         android:layout_height="44dp"
@@ -61,7 +61,7 @@
         android:spinnerMode="dropdown"
         android:inputType="textPersonName" />
 
-    <android.inputmethodservice.ExtractEditText
+    <EditText
         android:id="@+id/editTextOrt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
         android:hint="Ort"
         android:layout_margin="@dimen/marginNormal"/>
 
-    <android.inputmethodservice.ExtractEditText
+    <EditText
         android:id="@+id/editTextBeschreibung"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
