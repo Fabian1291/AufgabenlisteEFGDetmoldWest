@@ -48,15 +48,15 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     {
         String createQuery = "CREATE TABLE " + TABLE_NAME +
                 " (" + ID_COLUMN + " INTEGER PRIMARY KEY, " +
-                AUFGABE_COLUMN + " TEXT NOT NULL, " +
-                DATUM_COLUMN + " TEXT NOT NULL, " +
-                ORT_COLUMN + " TEXT NOT NULL, " +
-                ERSTELLER_COLUMN + " TEXT NOT NULL, " +
+                AUFGABE_COLUMN + " TEXT, " +
+                DATUM_COLUMN + " TEXT, " +
+                ORT_COLUMN + " TEXT, " +
+                ERSTELLER_COLUMN + " TEXT, " +
                 PRIORITAET_COLUMN + " INTEGER DEFAULT NULL, " +
-                BESCHREIBUNG_COLUMN + " TEXT NOT NULL, " +
+                BESCHREIBUNG_COLUMN + " TEXT, " +
                 ERLEDIGT_COLUMN + " INTEGER DEFAULT NULL, " +
-                ERLEDIGER_COLUMN + " TEXT NOT NULL, " +
-                DATUM_ERLEDIGT_COLUMN + " TEXT NOT NULL )";
+                ERLEDIGER_COLUMN + " TEXT, " +
+                DATUM_ERLEDIGT_COLUMN + " TEXT )";
 
         sqLiteDatabase.execSQL (createQuery);
     }
