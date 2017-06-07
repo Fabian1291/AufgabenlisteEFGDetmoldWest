@@ -1,5 +1,6 @@
 package com.fabian.android.aufgabenliste;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -28,7 +29,7 @@ public class FragmentOne extends Fragment
 
         this.listView = (ListView) view.findViewById(R.id.listview);
 
-        this.adapter = new AufgabenlisteAdapter (this, AufgabenlisteDatabase.getInstance (this).getAllAufgabenAsCursor ());
+        this.adapter = new AufgabenlisteAdapter (getActivity(), AufgabenlisteDatabase.getInstance (getActivity()).getAllAufgabenAsCursor ());
         this.listView.setAdapter (adapter);
         this.listView.setOnItemClickListener (new AdapterView.OnItemClickListener ()
         {
