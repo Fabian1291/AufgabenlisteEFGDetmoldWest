@@ -81,6 +81,9 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         values.put (ERSTELLER_COLUMN, aufgabe.getErsteller ());
         values.put (String.valueOf(PRIORITAET_COLUMN), aufgabe.getPrioritaet ());
         values.put (BESCHREIBUNG_COLUMN, aufgabe.getBeschreibung());
+        values.put (ERLEDIGT_COLUMN, aufgabe.getErledigt ());
+        values.put (ERLEDIGER_COLUMN, aufgabe.getErlediger ());
+        values.put (DATUM_ERLEDIGT_COLUMN, aufgabe.getDatumErledigt () == null ? null : aufgabe.getDatum ().getTimeInMillis () / 1000);
 
         long newId = database.insert (TABLE_NAME, null, values);
 
