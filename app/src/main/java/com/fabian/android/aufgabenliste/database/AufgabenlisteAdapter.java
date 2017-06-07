@@ -30,5 +30,6 @@ public class AufgabenlisteAdapter extends CursorAdapter
     {
         ((TextView) view.findViewById (R.id.listitemAufgabe)).setText (cursor.getString (cursor.getColumnIndex (AufgabenlisteDatabase.AUFGABE_COLUMN)));
         ((TextView) view.findViewById (R.id.listitemDatum)).setText (cursor.getString (cursor.getColumnIndex (AufgabenlisteDatabase.DATUM_COLUMN)));
+        ((TextView) view.findViewById (R.id.listitemOrt)).setText (cursor.getString (cursor.getColumnIndex (AufgabenlisteDatabase.ORT_COLUMN)));
     }
 }

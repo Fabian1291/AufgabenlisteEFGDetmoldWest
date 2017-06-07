@@ -15,12 +15,11 @@ public class Aufgabe
     private String Erlediger;
     private String DatumErledigt;
 
-    public Aufgabe (final String Aufgabe) {this (Aufgabe, null); }
-
-    public Aufgabe (String Aufgabe, String Datum)
+    public Aufgabe (String Aufgabe, String Datum, String Ort)
     {
         this.Aufgabe = Aufgabe;
         this.Datum = Datum;
+        this.Ort = Ort;
     }
 
     public long getId() {
