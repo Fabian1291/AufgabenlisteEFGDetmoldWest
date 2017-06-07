@@ -18,7 +18,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
 
     private static final String DB_NAME = "AUFGABENLISTE";
     private static final int VERSION = 1;
-    private static final String TABLE_NAME = "Aufgebenliste";
+    private static final String TABLE_NAME = "Aufgabenliste";
 
     public static final String ID_COLUMN = "_id";
     public static final String AUFGABE_COLUMN = "Aufgabe";
@@ -63,7 +63,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     @Override
     public void onUpgrade (SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion)
     {
-        String dropTable = "DROP TABLE IF EXISTS" + TABLE_NAME;
+        String dropTable = "DROP TABLE IF EXISTS " + TABLE_NAME;
         sqLiteDatabase.execSQL (dropTable);
 
         onCreate (sqLiteDatabase);
@@ -142,6 +142,6 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
 
     public Cursor getAllAufgabenAsCursor ()
     {
-        return this.getReadableDatabase().rawQuery("SELECT * FROM" + TABLE_NAME, null);
+        return this.getReadableDatabase().rawQuery("SELECT * FROM " + TABLE_NAME, null);
     }
 }
