@@ -104,16 +104,6 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
             cursor.moveToFirst();
             aufgabe = new Aufgabe(cursor.getString(cursor.getColumnIndex (AUFGABE_COLUMN)));
             aufgabe.setId(cursor.getLong(cursor.getColumnIndex (ID_COLUMN)));
-
-            Calendar calendar = null;
-
-            if (cursor.isNull(cursor.getColumnIndex (DATUM_COLUMN)))
-            {
-                calendar = Calendar.getInstance();
-                calendar.setTimeInMillis(cursor.getInt(cursor.getColumnIndex (DATUM_COLUMN)) * 1000);
-            }
-
-            aufgabe.setDatum (calendar);
         }
 
         database.close();
