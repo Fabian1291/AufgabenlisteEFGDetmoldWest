@@ -85,10 +85,11 @@
         android:id="@+id/buttonHinzufuegen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBeschreibung"
+        android:layout_margin="@dimen/marginNormal"
+        android:onClick="sendMessage"
+        android:text="Hinzufuegen"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_margin="@dimen/marginNormal"
-        android:text="Hinzufuegen"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextBeschreibung" />
 
 </android.support.constraint.ConstraintLayout>

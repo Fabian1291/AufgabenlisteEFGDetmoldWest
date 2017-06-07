@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
+import com.fabian.android.aufgabenliste.model.Aufgabe;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -62,14 +65,10 @@ public class Hinzufuegen extends AppCompatActivity
         Date today = Calendar.getInstance().getTime();
         String reportDate = df.format(today);
 
-        try {
-            dataSource.open();
-            dataSource.createEntry(Aufgabe, Ort, Beschreibung, getUsername(), null, 0, Prioritaet, reportDate, "0");
-            dataSource.close();
-        }
-        catch (Exception ex) {
-            Toast.makeText(this,ex.toString(), Toast.LENGTH_LONG).show();
-        }
+        AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Hinzufuegen.this);
+
+        database.createAufgabe(new Aufgabe(Aufgabe));
+
         startActivity(intent);
     }
     public String getUsername() {
