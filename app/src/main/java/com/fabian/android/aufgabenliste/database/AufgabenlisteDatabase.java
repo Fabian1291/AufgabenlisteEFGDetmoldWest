@@ -102,7 +102,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         if (cursor != null && cursor.getCount() > 0)
         {
             cursor.moveToFirst();
-            aufgabe = new Aufgabe(cursor.getString(cursor.getColumnIndex (AUFGABE_COLUMN)));
+            aufgabe = new Aufgabe(cursor.getString(cursor.getColumnIndex (AUFGABE_COLUMN)), cursor.getString(cursor.getColumnIndex (DATUM_COLUMN)), cursor.getString(cursor.getColumnIndex (ORT_COLUMN)));
             aufgabe.setId(cursor.getLong(cursor.getColumnIndex (ID_COLUMN)));
         }
 
