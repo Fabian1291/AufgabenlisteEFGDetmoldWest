@@ -37,10 +37,10 @@ public class Hinzufuegen extends AppCompatActivity
 
     public void sendMessage(View view) {
         Intent intent = new Intent(this, MainActivity.class);
-        EditText editText = (EditText) findViewById(R.id.editText);
-        EditText editText2 = (EditText) findViewById(R.id.editText2);
-        EditText editText3 = (EditText) findViewById(R.id.editText3);
-        Spinner spinner1 = (Spinner) findViewById(R.id.spinner1);
+        EditText editText = (EditText) findViewById(R.id.editTextAufgabe);
+        EditText editText2 = (EditText) findViewById(R.id.editTextOrt);
+        EditText editText3 = (EditText) findViewById(R.id.editTextBeschreibung);
+        Spinner spinner1 = (Spinner) findViewById(R.id.spinner);
         String Aufgabe = editText.getText().toString();
         String Ort = editText2.getText().toString();
         String Beschreibung= editText3.getText().toString();

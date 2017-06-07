@@ -51,6 +51,7 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
 
     <Spinner
+        android:id="@+id/spinner"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginNormal"
