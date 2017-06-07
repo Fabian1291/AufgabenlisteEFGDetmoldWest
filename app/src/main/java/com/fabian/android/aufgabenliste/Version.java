@@ -16,7 +16,7 @@ public class Version extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
         setSupportActionBar (toolbar);
-        toolbar.setTitle ("Version");
+        getSupportActionBar().setTitle ("Version");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled (true);
     }

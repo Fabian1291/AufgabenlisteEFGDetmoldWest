@@ -16,7 +16,7 @@ public class Aufgaben extends AppCompatActivity
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
         setSupportActionBar (toolbar);
-        toolbar.setTitle ("Aufgeben");
+        getSupportActionBar().setTitle ("Aufgaben");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled (true);
     }
