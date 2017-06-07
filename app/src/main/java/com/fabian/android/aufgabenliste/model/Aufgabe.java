@@ -6,18 +6,18 @@ public class Aufgabe
 {
     private long id;
     private String Aufgabe;
-    private Calendar Datum;
+    private String Datum;
     private String Ort;
     private String Ersteller;
     private int Prioritaet;
     private String Beschreibung;
     private int Erledigt;
     private String Erlediger;
-    private Calendar DatumErledigt;
+    private String DatumErledigt;
 
     public Aufgabe (final String Aufgabe) {this (Aufgabe, null); }
 
-    public Aufgabe (String Aufgabe, Calendar Datum)
+    public Aufgabe (String Aufgabe, String Datum)
     {
         this.Aufgabe = Aufgabe;
         this.Datum = Datum;
@@ -39,11 +39,11 @@ public class Aufgabe
         Aufgabe = aufgabe;
     }
 
-    public Calendar getDatum() {
+    public String getDatum() {
         return Datum;
     }
 
-    public void setDatum(Calendar datum) {
+    public void setDatum(String datum) {
         Datum = datum;
     }
 
@@ -95,11 +95,11 @@ public class Aufgabe
         Erlediger = erlediger;
     }
 
-    public Calendar getDatumErledigt() {
+    public String getDatumErledigt() {
         return DatumErledigt;
     }
 
-    public void setDatumErledigt(Calendar datumErledigt) {
+    public void setDatumErledigt(String datumErledigt) {
         DatumErledigt = datumErledigt;
     }
 }
