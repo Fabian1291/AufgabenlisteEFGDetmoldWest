@@ -61,13 +61,17 @@ public class Hinzufuegen extends AppCompatActivity
             return;
         }
 
-        DateFormat df = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date today = Calendar.getInstance().getTime();
         String reportDate = df.format(today);
 
+        DateFormat df1 = new SimpleDateFormat("HH:mm:ss");
+        Date today1 = Calendar.getInstance().getTime();
+        String reportTime = df1.format(today1);
+
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Hinzufuegen.this);
 
-        database.createAufgabe(new Aufgabe(Aufgabe, reportDate, Ort, Prioritaet, Beschreibung));
+        database.createAufgabe(new Aufgabe(Aufgabe, reportDate, reportTime, Ort, Prioritaet, Beschreibung));
 
         startActivity(intent);
     }
