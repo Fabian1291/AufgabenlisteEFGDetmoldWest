@@ -11,7 +11,6 @@ import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
 public class Aufgaben extends AppCompatActivity
 {
     Toolbar toolbar;
-    public String Aufgabe;
 
     @Override
     protected void onCreate (Bundle savedInstancesState) {
@@ -27,9 +26,14 @@ public class Aufgaben extends AppCompatActivity
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        Aufgabe = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
+        String Aufgabe = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
 
         TextView aufgabe = (TextView) findViewById(R.id.textViewAufgabe1);
         aufgabe.setText(Aufgabe);
+
+        String Ort = AufgabenlisteDatabase.getInstance(this).getOrt(i);
+
+        TextView ort = (TextView) findViewById(R.id.textViewOrt1);
+        aufgabe.setText(Ort);
     }
 }

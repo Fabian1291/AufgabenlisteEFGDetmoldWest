@@ -156,4 +156,17 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
 
         return Aufgabe;
     }
+
+    public String getOrt (int Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, UHRZEIT_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN, UHRZEIT_ERLEDIGT_COLUMN}, null, null, null, null, null);
+        cursor.move(Id);
+
+        String Aufgabe = cursor.getString(2);
+
+        database.close();
+
+        return Aufgabe;
+    }
 }
