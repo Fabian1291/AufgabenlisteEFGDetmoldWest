@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.fabian.android.aufgabenliste.model.Aufgabe;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class AufgabenlisteDatabase extends SQLiteOpenHelper
@@ -99,14 +98,14 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public Aufgabe readAufgabe (final long id)
     {
         SQLiteDatabase database = this.getReadableDatabase();
-        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN},ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, UHRZEIT_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN, UHRZEIT_ERLEDIGT_COLUMN},ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
 
         Aufgabe aufgabe = null;
 
         if (cursor != null && cursor.getCount() > 0)
         {
             cursor.moveToFirst();
-            aufgabe = new Aufgabe(cursor.getString(cursor.getColumnIndex (AUFGABE_COLUMN)), cursor.getString(cursor.getColumnIndex (DATUM_COLUMN)), cursor.getString(cursor.getColumnIndex (ORT_COLUMN)) ,cursor.getString (cursor.getColumnIndex (PRIORITAET_COLUMN)), cursor.getString (cursor.getColumnIndex(BESCHREIBUNG_COLUMN)));
+            aufgabe = new Aufgabe(cursor.getString(cursor.getColumnIndex (AUFGABE_COLUMN)), cursor.getString(cursor.getColumnIndex (DATUM_COLUMN)), cursor.getString(cursor.getColumnIndex (UHRZEIT_COLUMN)), cursor.getString(cursor.getColumnIndex (ORT_COLUMN)) ,cursor.getString (cursor.getColumnIndex (PRIORITAET_COLUMN)), cursor.getString (cursor.getColumnIndex(BESCHREIBUNG_COLUMN)));
             aufgabe.setId(cursor.getLong(cursor.getColumnIndex (ID_COLUMN)));
         }
 
