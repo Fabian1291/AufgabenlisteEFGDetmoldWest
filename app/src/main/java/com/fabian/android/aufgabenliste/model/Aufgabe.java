@@ -1,12 +1,11 @@
 package com.fabian.android.aufgabenliste.model;
 
-import java.util.Calendar;
-
 public class Aufgabe
 {
     private long id;
     private String Aufgabe;
     private String Datum;
+    private String Uhrzeit;
     private String Ort;
     private String Ersteller;
     private String Prioritaet;
@@ -14,11 +13,13 @@ public class Aufgabe
     private int Erledigt;
     private String Erlediger;
     private String DatumErledigt;
+    private String UhrzeitErldigt;
 
-    public Aufgabe (String Aufgabe, String Datum, String Ort, String Prioritaet, String Beschreibung)
+    public Aufgabe (String Aufgabe, String Datum, String Uhrzeit, String Ort, String Prioritaet, String Beschreibung)
     {
         this.Aufgabe = Aufgabe;
         this.Datum = Datum;
+        this.Uhrzeit = Uhrzeit;
         this.Ort = Ort;
         this.Prioritaet = Prioritaet;
         this.Beschreibung = Beschreibung;
@@ -102,5 +103,21 @@ public class Aufgabe
 
     public void setDatumErledigt(String datumErledigt) {
         DatumErledigt = datumErledigt;
+    }
+
+    public String getUhrzeit() {
+        return Uhrzeit;
+    }
+
+    public void setUhrzeit(String uhrzeit) {
+        Uhrzeit = uhrzeit;
+    }
+
+    public String getUhrzeitErldigt() {
+        return UhrzeitErldigt;
+    }
+
+    public void setUhrzeitErldigt(String uhrzeitErldigt) {
+        UhrzeitErldigt = uhrzeitErldigt;
     }
 }
