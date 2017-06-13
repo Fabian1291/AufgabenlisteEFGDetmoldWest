@@ -36,7 +36,9 @@ public class FragmentOne extends Fragment
             @Override
             public void onItemClick (final AdapterView<?> adapterView, final View view, final int i, final long l)
             {
-                Object element = adapterView.getAdapter ().getItem (i);
+                int id = (int) l;
+
+                Object element = adapterView.getAdapter ().getItem (id);
 
                 Log.e("ClickOnList", element.toString());
 
