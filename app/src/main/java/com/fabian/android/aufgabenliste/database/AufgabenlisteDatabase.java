@@ -136,6 +136,6 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
 
     public Cursor getAllAufgabenAsCursor ()
     {
-        return this.getReadableDatabase().rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        return this.getReadableDatabase().rawQuery("SELECT * FROM " + TABLE_NAME + "ORDER BY " + PRIORITAET_COLUMN, null);
     }
 }
