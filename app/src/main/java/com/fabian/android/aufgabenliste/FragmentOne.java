@@ -41,7 +41,7 @@ public class FragmentOne extends Fragment
             {
                 Intent intent = new Intent(getActivity(), Aufgaben.class);
 
-                intent.putExtra(ID_EXTRA, String.valueOf(i));
+                intent.putExtra (ID_EXTRA, i);
 
                 startActivity(intent);
             }

@@ -143,4 +143,17 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     {
         return this.getReadableDatabase().rawQuery("SELECT * FROM " + TABLE_NAME + " ORDER BY " + PRIORITAET_COLUMN + " DESC ", null);
     }
+
+    protected String getAufgabe(int Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, UHRZEIT_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN, UHRZEIT_ERLEDIGT_COLUMN}, null, null, null, null, null);
+        cursor.move(Id);
+
+        String Aufgabe = cursor.getString(1);
+
+        database.close();
+
+        return Aufgabe;
+    }
 }
