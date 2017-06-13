@@ -15,13 +15,13 @@ public class Aufgabe
     private String Erlediger;
     private String DatumErledigt;
 
-    public Aufgabe (String Aufgabe, String Datum, String Ort, String Beschreibung, String Prioriteat)
+    public Aufgabe (String Aufgabe, String Datum, String Ort, String Prioritaet, String Beschreibung)
     {
         this.Aufgabe = Aufgabe;
         this.Datum = Datum;
         this.Ort = Ort;
+        this.Prioritaet = Prioritaet;
         this.Beschreibung = Beschreibung;
-        this.Prioritaet = Prioriteat;
     }
 
     public long getId() {
