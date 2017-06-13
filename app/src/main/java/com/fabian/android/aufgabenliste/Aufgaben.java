@@ -25,7 +25,7 @@ public class Aufgaben extends AppCompatActivity
         setSupportActionBar (toolbar);
         //getSupportActionBar().setTitle ("Aufgaben");
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Aufgabe = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
 
