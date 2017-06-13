@@ -29,7 +29,7 @@ public class Aufgaben extends AppCompatActivity
 
         Aufgabe = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
 
-        TextView aufgabe = (TextView) findViewById(R.id.textViewAufgabe);
+        TextView aufgabe = (TextView) findViewById(R.id.textViewAufgabe1);
         aufgabe.setText(Aufgabe);
     }
 }
