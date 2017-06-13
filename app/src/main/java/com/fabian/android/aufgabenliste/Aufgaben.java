@@ -34,6 +34,6 @@ public class Aufgaben extends AppCompatActivity
         String Ort = AufgabenlisteDatabase.getInstance(this).getOrt(i);
 
         TextView ort = (TextView) findViewById(R.id.textViewOrt1);
-        aufgabe.setText(Ort);
+        ort.setText(Ort);
     }
 }
