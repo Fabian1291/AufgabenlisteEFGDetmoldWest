@@ -23,6 +23,8 @@ public class FragmentOne extends Fragment
     public FragmentOne ()
     {}
 
+    public final static String ID_EXTRA="com.example.fabian.aufgabenliste._ID";
+
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
