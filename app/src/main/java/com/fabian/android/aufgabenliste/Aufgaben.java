@@ -22,8 +22,8 @@ public class Aufgaben extends AppCompatActivity
         int i = intent.getIntExtra(FragmentOne.ID_EXTRA, 0);
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Aufgaben");
+        setSupportActionBar (toolbar);
+        //getSupportActionBar().setTitle ("Aufgaben");
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
