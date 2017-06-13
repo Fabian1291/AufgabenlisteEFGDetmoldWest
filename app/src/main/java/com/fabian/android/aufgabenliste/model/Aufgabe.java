@@ -9,17 +9,19 @@ public class Aufgabe
     private String Datum;
     private String Ort;
     private String Ersteller;
-    private int Prioritaet;
+    private String Prioritaet;
     private String Beschreibung;
     private int Erledigt;
     private String Erlediger;
     private String DatumErledigt;
 
-    public Aufgabe (String Aufgabe, String Datum, String Ort)
+    public Aufgabe (String Aufgabe, String Datum, String Ort, String Beschreibung, String Prioriteat)
     {
         this.Aufgabe = Aufgabe;
         this.Datum = Datum;
         this.Ort = Ort;
+        this.Beschreibung = Beschreibung;
+        this.Prioritaet = Prioriteat;
     }
 
     public long getId() {
@@ -62,11 +64,11 @@ public class Aufgabe
         Ersteller = ersteller;
     }
 
-    public int getPrioritaet() {
+    public String getPrioritaet() {
         return Prioritaet;
     }
 
-    public void setPrioritaet(int prioritaet) {
+    public void setPrioritaet(String prioritaet) {
         Prioritaet = prioritaet;
     }
 
