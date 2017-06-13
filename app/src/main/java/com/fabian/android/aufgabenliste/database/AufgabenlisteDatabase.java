@@ -79,7 +79,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         values.put (DATUM_COLUMN, aufgabe.getDatum ());
         values.put (ORT_COLUMN, aufgabe.getOrt ());
         values.put (ERSTELLER_COLUMN, aufgabe.getErsteller ());
-        values.put (String.valueOf(PRIORITAET_COLUMN), aufgabe.getPrioritaet ());
+        values.put (PRIORITAET_COLUMN, aufgabe.getPrioritaet ());
         values.put (BESCHREIBUNG_COLUMN, aufgabe.getBeschreibung());
         values.put (ERLEDIGT_COLUMN, aufgabe.getErledigt ());
         values.put (ERLEDIGER_COLUMN, aufgabe.getErlediger ());
@@ -95,7 +95,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public Aufgabe readAufgabe (final long id)
     {
         SQLiteDatabase database = this.getReadableDatabase();
-        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, String.valueOf(PRIORITAET_COLUMN), BESCHREIBUNG_COLUMN},ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN},ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
 
         Aufgabe aufgabe = null;
 
