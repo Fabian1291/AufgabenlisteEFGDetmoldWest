@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginNormal"
         android:layout_marginTop="@dimen/marginNormal"
-        android:text="07.06.2017"
+        android:text="13.06.2017"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewErsteller"/>
 
