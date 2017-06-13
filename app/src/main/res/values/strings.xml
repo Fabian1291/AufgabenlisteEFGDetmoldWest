@@ -4,4 +4,13 @@
     <string name="Untertitel">EFG Detmold West</string>
 
     <string name="Version">Alpha 0.5.0-25</string>
+
+    <string-array name="Spinner_Prioritaet">
+        <item>0-sehr niedrig</item>
+        <item>1-niedrig</item>
+        <item>2-normal</item>
+        <item>3-hoch</item>
+        <item>4-sehr hoch</item>
+        <item>5-dringend</item>
+    </string-array>
 </resources>
