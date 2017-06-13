@@ -52,7 +52,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
                 DATUM_COLUMN + " TEXT, " +
                 ORT_COLUMN + " TEXT, " +
                 ERSTELLER_COLUMN + " TEXT, " +
-                PRIORITAET_COLUMN + " INTEGER DEFAULT NULL, " +
+                PRIORITAET_COLUMN + " TEXT, " +
                 BESCHREIBUNG_COLUMN + " TEXT, " +
                 ERLEDIGT_COLUMN + " INTEGER DEFAULT NULL, " +
                 ERLEDIGER_COLUMN + " TEXT, " +
