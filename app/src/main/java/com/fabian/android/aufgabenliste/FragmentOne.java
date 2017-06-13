@@ -38,7 +38,7 @@ public class FragmentOne extends Fragment
             {
                 int id = (int) l;
 
-                Object element = adapterView.getAdapter ().getItemId (id);
+                Object element = adapterView.getAdapter ().getItemId (i);
 
                 Log.e("ClickOnList", element.toString());
 
