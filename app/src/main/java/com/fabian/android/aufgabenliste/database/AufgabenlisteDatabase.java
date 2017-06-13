@@ -17,12 +17,13 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public static AufgabenlisteDatabase INSTANCE = null;
 
     private static final String DB_NAME = "AUFGABENLISTE";
-    private static final int VERSION = 4;
+    private static final int VERSION = 5;
     private static final String TABLE_NAME = "Aufgabenliste";
 
     public static final String ID_COLUMN = "_id";
     public static final String AUFGABE_COLUMN = "Aufgabe";
     public static final String DATUM_COLUMN = "Datum";
+    public static final String UHRZEIT_COLUMN = "Uhrzeit";
     public static final String ORT_COLUMN = "Ort";
     public static final String ERSTELLER_COLUMN = "Ersteller";
     public static final String PRIORITAET_COLUMN = "Prioritaet";
@@ -30,6 +31,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public static final String ERLEDIGT_COLUMN = "Erledigt";
     public static final String ERLEDIGER_COLUMN = "Erlediger";
     public static final String DATUM_ERLEDIGT_COLUMN = "DatumErledigt";
+    public static final String UHRZEIT_ERLEDIGT_COLUMN = "UhrzeitErledigt";
 
     private AufgabenlisteDatabase (final Context context) {super(context, DB_NAME, null, VERSION);}
 
@@ -50,13 +52,15 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
                 " (" + ID_COLUMN + " INTEGER PRIMARY KEY, " +
                 AUFGABE_COLUMN + " TEXT, " +
                 DATUM_COLUMN + " TEXT, " +
+                UHRZEIT_COLUMN + " TEXT, " +
                 ORT_COLUMN + " TEXT, " +
                 ERSTELLER_COLUMN + " TEXT, " +
                 PRIORITAET_COLUMN + " TEXT, " +
                 BESCHREIBUNG_COLUMN + " TEXT, " +
                 ERLEDIGT_COLUMN + " INTEGER DEFAULT NULL, " +
                 ERLEDIGER_COLUMN + " TEXT, " +
-                DATUM_ERLEDIGT_COLUMN + " TEXT )";
+                DATUM_ERLEDIGT_COLUMN + " TEXT, " +
+                UHRZEIT_ERLEDIGT_COLUMN + " TEXT )";
 
         sqLiteDatabase.execSQL (createQuery);
     }
