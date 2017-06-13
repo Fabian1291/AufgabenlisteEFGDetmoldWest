@@ -80,6 +80,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         ContentValues values = new ContentValues ();
         values.put (AUFGABE_COLUMN, aufgabe.getAufgabe ());
         values.put (DATUM_COLUMN, aufgabe.getDatum ());
+        values.put (UHRZEIT_COLUMN, aufgabe.getUhrzeit());
         values.put (ORT_COLUMN, aufgabe.getOrt ());
         values.put (ERSTELLER_COLUMN, aufgabe.getErsteller ());
         values.put (PRIORITAET_COLUMN, aufgabe.getPrioritaet ());
@@ -87,6 +88,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         values.put (ERLEDIGT_COLUMN, aufgabe.getErledigt ());
         values.put (ERLEDIGER_COLUMN, aufgabe.getErlediger ());
         values.put (DATUM_ERLEDIGT_COLUMN, aufgabe.getDatumErledigt ());
+        values.put (UHRZEIT_ERLEDIGT_COLUMN, aufgabe.getUhrzeitErldigt());
 
         long newId = database.insert (TABLE_NAME, null, values);
 
