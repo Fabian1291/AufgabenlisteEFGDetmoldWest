@@ -4,28 +4,32 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
 
 public class Aufgaben extends AppCompatActivity
 {
     Toolbar toolbar;
+    public String Aufgabe;
 
     @Override
-    protected void onCreate (Bundle savedInstancesState)
-    {
-        super.onCreate (savedInstancesState);
-        setContentView (R.layout.activity_aufgaben);
+    protected void onCreate (Bundle savedInstancesState) {
+        super.onCreate(savedInstancesState);
+        setContentView(R.layout.activity_aufgaben);
 
         Intent intent = getIntent();
-        int i = Integer.valueOf (intent.getStringExtra(FragmentOne.ID_EXTRA));
+        int i = Integer.valueOf(intent.getStringExtra(FragmentOne.ID_EXTRA));
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
-        setSupportActionBar (toolbar);
-        getSupportActionBar().setTitle ("Aufgaben");
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Aufgaben");
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled (true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        String Aufgabe = AufgabenlisteDatabase.getAufgabe (i);
+        Aufgabe = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
+
+        TextView aufgabe = (TextView) findViewById(R.id.textViewAufgabe);
+        aufgabe.setText(Aufgabe);
     }
 }
