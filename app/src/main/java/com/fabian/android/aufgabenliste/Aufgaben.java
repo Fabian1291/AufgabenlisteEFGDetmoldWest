@@ -31,9 +31,24 @@ public class Aufgaben extends AppCompatActivity
         TextView aufgabe = (TextView) findViewById(R.id.textViewAufgabe1);
         aufgabe.setText(Aufgabe);
 
+        String Datum = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
+
+        TextView datum = (TextView) findViewById(R.id.textViewDatum1);
+        datum.setText(Datum);
+
+        String Uhrzeit = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
+
+        TextView uhrzeit = (TextView) findViewById(R.id.textViewUhrzeit1);
+        uhrzeit.setText(Uhrzeit);
+
         String Ort = AufgabenlisteDatabase.getInstance(this).getOrt(i);
 
         TextView ort = (TextView) findViewById(R.id.textViewOrt1);
         ort.setText(Ort);
+
+        String Beschreibung = AufgabenlisteDatabase.getInstance(this).getOrt(i);
+
+        TextView beschreibung = (TextView) findViewById(R.id.textViewBeschreibung1);
+        beschreibung.setText(Beschreibung);
     }
 }
