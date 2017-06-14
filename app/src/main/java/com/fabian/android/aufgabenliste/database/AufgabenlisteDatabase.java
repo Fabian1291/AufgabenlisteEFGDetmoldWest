@@ -126,6 +126,22 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         return aufgabe;
     }
 
+    public void updateAufgabe (long Id, String Erlediger, String DatumErledigt, String UhrzeitErledigt)
+    {
+        int id = (int) Id;
+
+        SQLiteDatabase database = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put (ERLEDIGT_COLUMN, 1);
+        values.put (ERLEDIGER_COLUMN, Erlediger);
+        values.put (DATUM_ERLEDIGT_COLUMN, DatumErledigt);
+        values.put (UHRZEIT_ERLEDIGT_COLUMN, UhrzeitErledigt);
+
+        database.update(TABLE_NAME, values, "_id = " + id, null);
+
+        database.close();
+    }
+
     public List<Aufgabe> readAllAufgaben ()
     {
         List<Aufgabe> todos = new ArrayList<>();

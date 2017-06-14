@@ -8,6 +8,11 @@ import android.widget.TextView;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Aufgaben extends AppCompatActivity
 {
     Toolbar toolbar;
@@ -61,5 +66,17 @@ public class Aufgaben extends AppCompatActivity
 
         TextView ersteller = (TextView) findViewById(R.id.textViewErsteller1);
         ersteller.setText(Ersteller);
+
+        Intent intentErledigt = new Intent(this, MainActivity.class);
+
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        Date today = Calendar.getInstance().getTime();
+        String reportDate = df.format(today);
+
+        DateFormat df1 = new SimpleDateFormat("HH:mm:ss");
+        Date today1 = Calendar.getInstance().getTime();
+        String reportTime = df1.format(today1);
+
+        startActivity(intent);
     }
 }
