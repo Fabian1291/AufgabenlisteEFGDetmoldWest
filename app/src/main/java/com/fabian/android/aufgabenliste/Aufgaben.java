@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
@@ -20,6 +21,8 @@ import java.util.List;
 public class Aufgaben extends AppCompatActivity
 {
     Toolbar toolbar;
+    Intent intent = getIntent();
+    long i = intent.getExtras().getLong("id");
 
     @Override
     protected void onCreate (Bundle savedInstancesState)
@@ -28,7 +31,6 @@ public class Aufgaben extends AppCompatActivity
         setContentView(R.layout.activity_aufgaben);
 
         Intent intent = getIntent();
-        long i = intent.getExtras().getLong("id");
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
         setSupportActionBar (toolbar);
@@ -70,7 +72,10 @@ public class Aufgaben extends AppCompatActivity
 
         TextView ersteller = (TextView) findViewById(R.id.textViewErsteller1);
         ersteller.setText(Ersteller);
+    }
 
+    public void update (View view)
+    {
         Intent intentErledigt = new Intent(this, MainActivity.class);
 
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
@@ -81,7 +86,11 @@ public class Aufgaben extends AppCompatActivity
         Date today1 = Calendar.getInstance().getTime();
         String reportTime = df1.format(today1);
 
-        startActivity(intent);
+        AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben.this);
+
+        database.updateAufgabe(i, getUsername(), reportDate, reportTime);
+
+        startActivity(intentErledigt);
     }
 
     public String getUsername() {
