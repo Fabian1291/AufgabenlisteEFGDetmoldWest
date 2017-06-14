@@ -113,9 +113,9 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
                     cursor.getString (cursor.getColumnIndex (ORT_COLUMN)),
                     cursor.getString (cursor.getColumnIndex (PRIORITAET_COLUMN)),
                     cursor.getString (cursor.getColumnIndex (BESCHREIBUNG_COLUMN)),
-                    cursor.getString (cursor.getColumnIndex (ERLEDIGT_COLUMN)),
+                    cursor.getInt (cursor.getColumnIndex (ERLEDIGT_COLUMN)),
                     cursor.getString (cursor.getColumnIndex (ERLEDIGER_COLUMN)),
-                    cursor.getString (cursor.getColumnIndex (DATUM_COLUMN)),
+                    cursor.getString (cursor.getColumnIndex (DATUM_ERLEDIGT_COLUMN)),
                     cursor.getString (cursor.getColumnIndex (UHRZEIT_ERLEDIGT_COLUMN)));
             aufgabe.setId(cursor.getLong(cursor.getColumnIndex (ID_COLUMN)));
         }
