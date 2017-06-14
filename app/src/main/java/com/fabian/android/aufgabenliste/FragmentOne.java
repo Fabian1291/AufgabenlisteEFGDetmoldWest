@@ -24,8 +24,6 @@ public class FragmentOne extends Fragment
     public FragmentOne ()
     {}
 
-    public final static String ID_EXTRA="com.example.fabian.aufgabenliste._ID";
-
     @Override
     public View onCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -42,7 +40,7 @@ public class FragmentOne extends Fragment
             {
                 Intent intent = new Intent(getActivity(), Aufgaben.class);
 
-                intent.putExtra (ID_EXTRA, i);
+                intent.putExtra ("id", i);
 
                 //zum Debuggen um die id anzuzeigen
                 Toast.makeText(getActivity(), ID_EXTRA.toString(), Toast.LENGTH_LONG).show();
