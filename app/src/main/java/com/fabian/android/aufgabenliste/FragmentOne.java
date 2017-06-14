@@ -45,7 +45,7 @@ public class FragmentOne extends Fragment
                 intent.putExtra (ID_EXTRA, i);
 
                 //zum Debuggen um die id anzuzeigen
-                Toast.makeText(getActivity(), i, Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), ID_EXTRA.toString(), Toast.LENGTH_LONG).show();
 
                 startActivity(intent);
             }
