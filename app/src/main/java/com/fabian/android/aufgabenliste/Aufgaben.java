@@ -21,8 +21,6 @@ import java.util.List;
 public class Aufgaben extends AppCompatActivity
 {
     Toolbar toolbar;
-    Intent intent = getIntent();
-    long i = intent.getExtras().getLong("id");
 
     @Override
     protected void onCreate (Bundle savedInstancesState)
@@ -31,6 +29,7 @@ public class Aufgaben extends AppCompatActivity
         setContentView(R.layout.activity_aufgaben);
 
         Intent intent = getIntent();
+        long i = intent.getExtras().getLong("id");
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
         setSupportActionBar (toolbar);
@@ -76,6 +75,9 @@ public class Aufgaben extends AppCompatActivity
 
     public void update (View view)
     {
+        Intent intent = getIntent();
+        long i = intent.getExtras().getLong("id");
+
         Intent intentErledigt = new Intent(this, MainActivity.class);
 
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
