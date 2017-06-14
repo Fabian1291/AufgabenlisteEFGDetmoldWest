@@ -21,11 +21,11 @@ public class Aufgaben_Erledigt extends AppCompatActivity
         Intent intent = getIntent();
         long i = intent.getExtras().getLong("id");
 
-        toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
+        toolbar = (Toolbar) findViewById(R.id.toolbarAufgabenErledigt);
         setSupportActionBar (toolbar);
-        //getSupportActionBar().setTitle ("Aufgaben erledigt");
+        getSupportActionBar().setTitle ("Aufgaben erledigt");
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String Aufgabe = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
 

@@ -31,11 +31,11 @@ public class Aufgaben extends AppCompatActivity
         Intent intent = getIntent();
         long i = intent.getExtras().getLong("id");
 
-        toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
+        toolbar = (Toolbar) findViewById(R.id.toolbarAufgaben);
         setSupportActionBar (toolbar);
-        //getSupportActionBar().setTitle ("Aufgaben");
+        getSupportActionBar().setTitle ("Aufgaben");
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         String Aufgabe = AufgabenlisteDatabase.getInstance(this).getAufgabe(i);
 
