@@ -144,11 +144,12 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         return this.getReadableDatabase().rawQuery("SELECT * FROM " + TABLE_NAME + " ORDER BY " + PRIORITAET_COLUMN + " DESC ", null);
     }
 
-    public String getAufgabe (int Id) {
+    public String getAufgabe (long Id) {
 
         SQLiteDatabase database = this.getReadableDatabase();
         Cursor cursor = database.query (TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, UHRZEIT_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN, UHRZEIT_ERLEDIGT_COLUMN}, null, null, null, null, null);
-        cursor.move(Id);
+        int id = (int) Id;
+        cursor.move(id);
 
         String Aufgabe = cursor.getString(1);
 
@@ -157,11 +158,12 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         return Aufgabe;
     }
 
-    public String getOrt (int Id) {
+    public String getOrt (long Id) {
 
         SQLiteDatabase database = this.getReadableDatabase();
         Cursor cursor = database.query (TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, UHRZEIT_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN, UHRZEIT_ERLEDIGT_COLUMN}, null, null, null, null, null);
-        cursor.move(Id);
+        int id = (int) Id;
+        cursor.move(id);
 
         String Aufgabe = cursor.getString(4);
 

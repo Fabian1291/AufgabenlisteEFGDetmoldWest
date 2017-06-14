@@ -18,7 +18,7 @@ public class Aufgaben extends AppCompatActivity
         setContentView(R.layout.activity_aufgaben);
 
         Intent intent = getIntent();
-        int i = intent.getExtras().getInt("id");
+        long i = intent.getExtras().getLong("id");
 
         toolbar = (Toolbar) findViewById(R.id.toolbarVersion);
         setSupportActionBar (toolbar);
