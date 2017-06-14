@@ -44,7 +44,37 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <TextView
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:layout_marginLeft="@dimen/marginNormal"
+                android:text="Alpha 0.5.0-66"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appbar" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/marginNormal"
+                android:layout_marginLeft="@dimen/marginNormal"
+                android:layout_marginRight="@dimen/marginNormal"
+                android:layout_marginStart="@dimen/marginNormal"
+                android:layout_marginTop="@dimen/marginNormal"
+                android:text=" -App komplett neu geschrieben\n
+-den ArrayAdapter durch einen CurosorAdapter ersetzt\n
+-Seite Erledigt wieder hinzugefügt\n
+-Seite Changelog erstellt\n
+-Seite Version erstellt"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <TextView
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
