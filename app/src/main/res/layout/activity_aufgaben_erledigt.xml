@@ -70,11 +70,31 @@
         android:layout_margin="@dimen/marginNormal" />
 
     <TextView
+        android:id="@+id/textViewUhrzeit_erledigt"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Uhrzeit: "
+        app:layout_constraintTop_toBottomOf="@+id/textViewDatum_erledigt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="@dimen/marginNormal"/>
+
+    <TextView
+        android:id="@+id/textViewUhrzeit1_erledigt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDatum_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewUhrzeit_erledigt"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="@dimen/marginNormal" />
+
+    <TextView
         android:id="@+id/textViewPrioritaet_erledigt"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Priorität: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum_erledigt"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit_erledigt"
         app:layout_constraintLeft_toLeftOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal"/>
@@ -83,7 +103,7 @@
         android:id="@+id/textViewPrioritaet1_erledigt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum_erledigt"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit_erledigt"
         app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
@@ -185,6 +205,26 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textViewErlediger_erledigt"
         app:layout_constraintLeft_toRightOf="@+id/textViewDatum2_erledigt"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="@dimen/marginNormal" />
+
+    <TextView
+        android:id="@+id/textViewUhreit2_erledigt"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Uhrzeit: "
+        app:layout_constraintTop_toBottomOf="@+id/textViewDatum2_erledigt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:layout_margin="@dimen/marginNormal"/>
+
+    <TextView
+        android:id="@+id/textViewUhrzeit3_erledigt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDatum2_erledigt"
+        app:layout_constraintLeft_toRightOf="@+id/textViewUhreit2_erledigt"
         app:layout_constraintRight_toRightOf="parent"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
