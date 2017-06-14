@@ -75,6 +75,7 @@ public class Hinzufuegen extends AppCompatActivity
 
         startActivity(intent);
     }
+
     public String getUsername() {
         AccountManager manager = AccountManager.get(this);
         Account[] accounts = manager.getAccountsByType("com.google");
