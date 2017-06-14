@@ -16,7 +16,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public static AufgabenlisteDatabase INSTANCE = null;
 
     private static final String DB_NAME = "AUFGABENLISTE";
-    private static final int VERSION = 5;
+    private static final int VERSION = 6;
     private static final String TABLE_NAME = "Aufgabenliste";
 
     public static final String ID_COLUMN = "_id";
