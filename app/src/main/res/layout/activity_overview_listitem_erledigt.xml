@@ -18,6 +18,16 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
+        android:id="@+id/listitemDatum_erledigt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/listitemAufgabe_erledigt"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="TextView"
+        android:layout_marginRight="15dp"/>
+
+    <TextView
         android:id="@+id/listitemOrt_erledigt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +39,7 @@
         android:layout_marginTop="5dp"/>
 
     <TextView
-        android:id="@+id/listitemDatum_erledigt"
+        android:id="@+id/listitemDatum_erledigt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/listitemOrt_erledigt"
