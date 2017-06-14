@@ -158,10 +158,136 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         return Aufgabe;
     }
 
+    public String getDatum (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{DATUM_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getUhrzeit (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{UHRZEIT_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
     public String getOrt (long Id) {
 
         SQLiteDatabase database = this.getReadableDatabase();
         Cursor cursor = database.query (TABLE_NAME, new String[]{ORT_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getErsteller (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{ERSTELLER_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getPrioritaet (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{PRIORITAET_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getBeschreibung (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{BESCHREIBUNG_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getErledigt (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{ERLEDIGT_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getErlediger (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{ERLEDIGER_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getDatumErledigt (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{DATUM_ERLEDIGT_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getUhrzeitErledigt (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{UHRZEIT_ERLEDIGT_COLUMN}, null, null, null, null, null);
         int id = (int) Id;
         cursor.move(id);
 
