@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteAdapter;
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
@@ -42,6 +43,9 @@ public class FragmentOne extends Fragment
                 Intent intent = new Intent(getActivity(), Aufgaben.class);
 
                 intent.putExtra (ID_EXTRA, i);
+
+                //zum Debuggen um die id anzuzeigen
+                Toast.makeText(getActivity(), i, Toast.LENGTH_LONG).show();
 
                 startActivity(intent);
             }
