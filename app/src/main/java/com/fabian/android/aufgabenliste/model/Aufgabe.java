@@ -15,12 +15,13 @@ public class Aufgabe
     private String DatumErledigt;
     private String UhrzeitErldigt;
 
-    public Aufgabe (String Aufgabe, String Datum, String Uhrzeit, String Ort, String Prioritaet, String Beschreibung, int Erledigt, String Erlediger, String DatumErledigt, String UhrzeitErledigt)
+    public Aufgabe (String Aufgabe, String Datum, String Uhrzeit, String Ort, String Ersteller, String Prioritaet, String Beschreibung, int Erledigt, String Erlediger, String DatumErledigt, String UhrzeitErledigt)
     {
         this.Aufgabe = Aufgabe;
         this.Datum = Datum;
         this.Uhrzeit = Uhrzeit;
         this.Ort = Ort;
+        this.Ersteller = Ersteller;
         this.Prioritaet = Prioritaet;
         this.Beschreibung = Beschreibung;
         this.Erledigt = Erledigt;
