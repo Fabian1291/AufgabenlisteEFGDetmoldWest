@@ -43,7 +43,7 @@ public class FragmentOne extends Fragment
                 intent.putExtra ("id", l);
 
                 //zum Debuggen um die id anzuzeigen
-                Toast.makeText(getActivity(), ""+l, Toast.LENGTH_LONG).show();
+                //Toast.makeText(getActivity(), ""+l, Toast.LENGTH_LONG).show();
 
                 startActivity(intent);
             }
