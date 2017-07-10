@@ -38,7 +38,8 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_margin="@dimen/marginNormal"
-        android:hint="Aufgabe"/>
+        android:hint="Aufgabe"
+        android:textColorHint="@color/grau"/>
 
     <TextView
         android:id="@+id/textViewPrio"
@@ -69,6 +70,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:hint="Ort"
+        android:textColorHint="@color/grau"
         android:layout_margin="@dimen/marginNormal"/>
 
     <EditText
@@ -79,6 +81,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:hint="Beschreibung"
+        android:textColorHint="@color/grau"
         android:layout_margin="@dimen/marginNormal" />
 
     <Button
