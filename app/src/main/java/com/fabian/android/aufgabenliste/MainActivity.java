@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,12 +23,13 @@ public class MainActivity extends AppCompatActivity
     private Toolbar toolbar;
     private ViewPager viewPager;
     private TabLayout tabLayout;
+    EditText password = (EditText)findViewById(R.id.editText2);
 
     @Override
     protected void onCreate (Bundle savedInstanceState)
     {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_main);
+        setContentView (R.layout.acitvity_login);
 
         toolbar = (Toolbar) findViewById (R.id.toolbar);
         setSupportActionBar (toolbar);
@@ -51,6 +53,14 @@ public class MainActivity extends AppCompatActivity
                 startActivity (intent);
             }
         });
+    }
+
+    public void login (View view)
+    {
+        if (password.getText().toString().equals("test"))
+        {
+            setContentView (R.layout.activity_main);
+        }
     }
 
     @Override
