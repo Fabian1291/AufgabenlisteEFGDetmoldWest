@@ -53,7 +53,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".UserArea"></activity>
+        <activity android:name=".UserArea" />
+        <activity android:name=".Login"></activity>
     </application>
 
 </manifest>
