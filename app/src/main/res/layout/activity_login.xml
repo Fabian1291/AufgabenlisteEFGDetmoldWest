@@ -29,4 +29,36 @@
 
     </android.support.design.widget.AppBarLayout>
 
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:layout_margin="@dimen/marginNormal"
+        android:hint="Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarLogin"/>
+
+    <EditText
+        android:id="@+id/editTextPasswort"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:layout_margin="@dimen/marginNormal"
+        android:hint="Passwort"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextName"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Log in"
+        android:layout_margin="@dimen/marginNormal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextPasswort"/>
+
 </android.support.constraint.ConstraintLayout>
