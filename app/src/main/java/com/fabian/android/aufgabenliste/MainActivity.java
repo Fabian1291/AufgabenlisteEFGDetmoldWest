@@ -123,7 +123,6 @@ public class MainActivity extends AppCompatActivity
     public void onBackPressed ()
     {
         finish();
-        System.exit(0);
-        android.os.Process.killProcess(android.os.Process.myPid());
+        moveTaskToBack(true);
     }
 }
