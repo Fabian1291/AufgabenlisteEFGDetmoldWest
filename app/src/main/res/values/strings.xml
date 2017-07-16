@@ -3,7 +3,7 @@
     <string name="Overflow_Version">Version</string>
     <string name="Untertitel">EFG Detmold West</string>
 
-    <string name="Version">Alpha 0.6.0-2</string>
+    <string name="Version">Alpha 0.6.0-3</string>
 
     <string-array name="Spinner_Prioritaet">
         <item>0-sehr niedrig</item>
