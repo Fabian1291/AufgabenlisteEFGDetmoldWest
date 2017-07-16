@@ -118,4 +118,10 @@ public class MainActivity extends AppCompatActivity
             return mFragmentTitleList.get (position);
         }
     }
+
+    @Override
+    public void onBackPressed ()
+    {
+        finish();
+    }
 }
