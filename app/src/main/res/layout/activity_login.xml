@@ -30,17 +30,6 @@
     </android.support.design.widget.AppBarLayout>
 
     <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:layout_margin="@dimen/marginNormal"
-        android:hint="Name"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appbarLogin"/>
-
-    <EditText
         android:id="@+id/editTextPasswort"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -49,7 +38,7 @@
         android:hint="Passwort"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextName"/>
+        app:layout_constraintTop_toBottomOf="@id/appbarLogin"/>
 
     <Button
         android:id="@+id/button"
