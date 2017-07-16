@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
 
         String passwort = editText.getText ().toString ();
 
-        if (passwort.equals ("test"))
+        if (passwort.equals ("West210"))
         {
             startActivity(intent);
         }
