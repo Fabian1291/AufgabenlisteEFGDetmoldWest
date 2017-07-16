@@ -123,5 +123,6 @@ public class MainActivity extends AppCompatActivity
     public void onBackPressed ()
     {
         finish();
+        System.exit(0);
     }
 }
