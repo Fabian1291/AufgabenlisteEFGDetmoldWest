@@ -36,6 +36,7 @@
         android:inputType="textPassword"
         android:layout_margin="@dimen/marginNormal"
         android:hint="Passwort"
+        android:textColorHint="@color/grau"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/appbarLogin"/>
