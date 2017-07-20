@@ -181,12 +181,23 @@
         android:layout_margin="@dimen/marginNormal"/>
 
     <Button
+        android:id="@+id/ButtonNeu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginNormal"
         android:text="Erledigt"
         android:onClick="update"
         app:layout_constraintTop_toBottomOf="@id/editTextErlediger"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginNormal"
+        android:text="Löschen"
+        android:onClick="delete"
+        app:layout_constraintTop_toBottomOf="@id/ButtonNeu"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
