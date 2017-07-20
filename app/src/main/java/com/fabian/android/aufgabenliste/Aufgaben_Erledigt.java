@@ -97,4 +97,18 @@ public class Aufgaben_Erledigt extends AppCompatActivity
 
         startActivity(intentErledigt);
     }
+
+    public void delete2 (View view)
+    {
+        Intent intent = getIntent ();
+        long i = intent.getExtras ().getLong ("id");
+
+        Intent intentLoeschen = new Intent (this, MainActivity.class);
+
+        AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben_Erledigt.this);
+
+        database.deleteAufgabe (i);
+
+        startActivity (intentLoeschen);
+    }
 }

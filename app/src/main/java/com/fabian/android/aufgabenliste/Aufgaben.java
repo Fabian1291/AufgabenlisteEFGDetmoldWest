@@ -116,5 +116,7 @@ public class Aufgaben extends AppCompatActivity
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben.this);
 
         database.deleteAufgabe (i);
+
+        startActivity (intentLoeschen);
     }
 }
