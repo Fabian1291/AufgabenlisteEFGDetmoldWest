@@ -155,6 +155,15 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         database.close();
     }
 
+    public void deleteAufgabe (long Id)
+    {
+        int id = (int) Id;
+
+        SQLiteDatabase database = getWritableDatabase ();
+
+        database.rawQuery ("DELETE FROM " + TABLE_NAME + " WHERE ID = " + id, null);
+    }
+
     public List<Aufgabe> readAllAufgaben ()
     {
         List<Aufgabe> todos = new ArrayList<>();
