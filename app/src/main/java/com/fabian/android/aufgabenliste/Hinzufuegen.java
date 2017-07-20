@@ -41,11 +41,13 @@ public class Hinzufuegen extends AppCompatActivity
     public void sendMessage(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         EditText editText = (EditText) findViewById(R.id.editTextAufgabe);
+        EditText editText4 = (EditText) findViewById(R.id.editTextErsteller);
         EditText editText2 = (EditText) findViewById(R.id.editTextOrt);
         EditText editText3 = (EditText) findViewById(R.id.editTextBeschreibung);
         Spinner spinner1 = (Spinner) findViewById(R.id.spinner);
         String Aufgabe = editText.getText().toString();
         String Ort = editText2.getText().toString();
+        String Ersteller = editText4.getText().toString();
         String Beschreibung= editText3.getText().toString();
         String Prioritaet = String.valueOf(spinner1.getSelectedItem());
 
@@ -71,32 +73,8 @@ public class Hinzufuegen extends AppCompatActivity
 
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Hinzufuegen.this);
 
-        database.createAufgabe(new Aufgabe(Aufgabe, reportDate, reportTime, Ort, getUsername(), Prioritaet, Beschreibung, 0, null, null, null));
+        database.createAufgabe(new Aufgabe(Aufgabe, reportDate, reportTime, Ort, Ersteller, Prioritaet, Beschreibung, 0, null, null, null));
 
         startActivity(intent);
     }
-
-    public String getUsername() {
-        AccountManager manager = AccountManager.get(this);
-        Account[] accounts = manager.getAccountsByType("com.google");
-        List<String> possibleEmails = new LinkedList<String>();
-
-        for (Account account : accounts) {
-            // TODO: Check possibleEmail against an email regex or treat
-            // account.name as an email address only for certain account.type
-            // values.
-            possibleEmails.add(account.name);
-        }
-
-        if (!possibleEmails.isEmpty() && possibleEmails.get(0) != null) {
-            String email = possibleEmails.get(0);
-            String[] parts = email.split("@");
-            if (parts.length > 0 && parts[0] != null)
-                return parts[0];
-            else
-                return null;
-        } else
-            return null;
-    }
-
 }
