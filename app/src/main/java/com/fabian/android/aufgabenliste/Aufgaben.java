@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
 
@@ -91,6 +92,12 @@ public class Aufgaben extends AppCompatActivity
         DateFormat df1 = new SimpleDateFormat("HH:mm:ss");
         Date today1 = Calendar.getInstance().getTime();
         String reportTime = df1.format(today1);
+
+        if (Erlediger.length() == 0)
+        {
+            Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
+            return;
+        }
 
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben.this);
 
