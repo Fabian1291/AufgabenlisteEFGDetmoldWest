@@ -85,6 +85,12 @@ public class Aufgaben extends AppCompatActivity
         EditText editTextErlediger = (EditText) findViewById(R.id.editTextErsteller);
         String Erlediger = editTextErlediger.getText().toString();
 
+        if (Erlediger.length() == 0)
+        {
+            Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date today = Calendar.getInstance().getTime();
         String reportDate = df.format(today);
@@ -92,12 +98,6 @@ public class Aufgaben extends AppCompatActivity
         DateFormat df1 = new SimpleDateFormat("HH:mm:ss");
         Date today1 = Calendar.getInstance().getTime();
         String reportTime = df1.format(today1);
-
-        if (Erlediger.length() == 0)
-        {
-            Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
-            return;
-        }
 
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben.this);
 
