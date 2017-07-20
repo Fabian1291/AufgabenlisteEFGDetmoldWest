@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
@@ -80,6 +81,9 @@ public class Aufgaben extends AppCompatActivity
 
         Intent intentErledigt = new Intent(this, MainActivity.class);
 
+        EditText editTextErlediger = (EditText) findViewById(R.id.editTextErsteller);
+        String Erlediger = editTextErlediger.getText().toString();
+
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date today = Calendar.getInstance().getTime();
         String reportDate = df.format(today);
@@ -90,7 +94,7 @@ public class Aufgaben extends AppCompatActivity
 
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben.this);
 
-        database.updateAufgabe(i, getUsername(), reportDate, reportTime);
+        database.updateAufgabe(i, Erlediger, reportDate, reportTime);
 
         startActivity(intentErledigt);
     }
