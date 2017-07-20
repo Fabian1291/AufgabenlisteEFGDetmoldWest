@@ -142,6 +142,19 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         database.close();
     }
 
+    public void updateAufgabeNichtErledigt (long Id)
+    {
+        int id = (int) Id;
+
+        SQLiteDatabase database = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put (ERLEDIGT_COLUMN, 0);
+
+        database.update(TABLE_NAME, values, "_id = " + id, null);
+
+        database.close();
+    }
+
     public List<Aufgabe> readAllAufgaben ()
     {
         List<Aufgabe> todos = new ArrayList<>();

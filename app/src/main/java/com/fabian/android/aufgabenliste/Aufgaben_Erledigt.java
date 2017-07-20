@@ -4,9 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Aufgaben_Erledigt extends AppCompatActivity
 {
@@ -76,5 +82,19 @@ public class Aufgaben_Erledigt extends AppCompatActivity
 
         TextView uhrzeit2 = (TextView) findViewById(R.id.textViewUhrzeit3_erledigt);
         uhrzeit2.setText(Uhrzeit2);
+    }
+
+    public void nichterledigt (View view)
+    {
+        Intent intent = getIntent();
+        long i = intent.getExtras().getLong("id");
+
+        Intent intentErledigt = new Intent(this, MainActivity.class);
+
+        AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben_Erledigt.this);
+
+        database.updateAufgabeNichtErledigt(i);
+
+        startActivity(intentErledigt);
     }
 }
