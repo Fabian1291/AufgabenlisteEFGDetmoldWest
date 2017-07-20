@@ -105,4 +105,16 @@ public class Aufgaben extends AppCompatActivity
 
         startActivity(intentErledigt);
     }
+
+    public void delete (View view)
+    {
+        Intent intent = getIntent ();
+        long i = intent.getExtras ().getLong ("id");
+
+        Intent intentLoeschen = new Intent (this, MainActivity.class);
+
+        AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben.this);
+
+        database.deleteAufgabe (i);
+    }
 }
