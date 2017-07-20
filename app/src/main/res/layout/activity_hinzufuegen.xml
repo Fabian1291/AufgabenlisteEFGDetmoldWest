@@ -63,10 +63,21 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/editTextOrt"
+        android:id="@+id/editTextErsteller"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textViewPrio"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Ersteller"
+        android:textColorHint="@color/grau"
+        android:layout_margin="@dimen/marginNormal"/>
+
+    <EditText
+        android:id="@+id/editTextOrt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/editTextErsteller"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:hint="Ort"
