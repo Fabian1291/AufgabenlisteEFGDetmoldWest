@@ -169,13 +169,24 @@
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:layout_margin="@dimen/marginNormal" />
 
+    <EditText
+        android:id="@+id/editTextErlediger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textViewErsteller1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="Name"
+        android:textColorHint="@color/grau"
+        android:layout_margin="@dimen/marginNormal"/>
+
     <Button
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginNormal"
         android:text="Erledigt"
         android:onClick="update"
-        app:layout_constraintTop_toBottomOf="@id/textViewErsteller"
+        app:layout_constraintTop_toBottomOf="@id/editTextErlediger"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
