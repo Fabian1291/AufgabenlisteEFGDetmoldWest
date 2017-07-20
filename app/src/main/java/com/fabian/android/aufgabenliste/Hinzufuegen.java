@@ -57,6 +57,12 @@ public class Hinzufuegen extends AppCompatActivity
             return;
         }
 
+        if (Ersteller.length() == 0)
+        {
+            Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         if (Ort.length() == 0)
         {
             Toast.makeText(this,"Bitte das Feld 'Ort' ausfüllen", Toast.LENGTH_LONG).show();
