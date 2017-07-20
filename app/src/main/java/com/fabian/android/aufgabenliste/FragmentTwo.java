@@ -27,7 +27,7 @@ public class FragmentTwo extends Fragment
 
         this.listView = (ListView) view.findViewById(R.id.listviewtwo);
 
-        this.adapter = new AufgabenlisteAdapter(getActivity(), AufgabenlisteDatabase.getInstance (getActivity()).getAllAufgabenErledigtAsCursor ());
+        this.adapter = new AufgabenlisteAdapter (getActivity(), AufgabenlisteDatabase.getInstance (getActivity ()).getAllAufgabenErledigtAsCursor ());
         this.listView.setAdapter (adapter);
         this.listView.setOnItemClickListener (new AdapterView.OnItemClickListener ()
         {
