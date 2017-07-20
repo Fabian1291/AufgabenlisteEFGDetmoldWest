@@ -82,7 +82,7 @@ public class Aufgaben extends AppCompatActivity
 
         Intent intentErledigt = new Intent(this, MainActivity.class);
 
-        EditText editTextErlediger = (EditText) findViewById(R.id.editTextErsteller);
+        EditText editTextErlediger = (EditText) findViewById(R.id.editTextErlediger);
         String Erlediger = editTextErlediger.getText().toString();
 
         if (Erlediger.length() == 0)
