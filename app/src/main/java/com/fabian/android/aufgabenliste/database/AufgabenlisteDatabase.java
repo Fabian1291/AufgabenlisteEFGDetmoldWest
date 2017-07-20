@@ -161,7 +161,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
 
         SQLiteDatabase database = getWritableDatabase ();
 
-        database.rawQuery ("DELETE FROM " + TABLE_NAME + " WHERE ID = " + id, null);
+        database.delete (TABLE_NAME, "_id = " + id, null);
     }
 
     public List<Aufgabe> readAllAufgaben ()
