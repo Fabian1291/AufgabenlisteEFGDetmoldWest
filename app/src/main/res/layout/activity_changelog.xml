@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/marginNormal"
                 android:layout_marginLeft="@dimen/marginNormal"
-                android:text="Alpha 0.5.0-66"
+                android:text="Alpha 0.6.0-9"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/appbar" />
