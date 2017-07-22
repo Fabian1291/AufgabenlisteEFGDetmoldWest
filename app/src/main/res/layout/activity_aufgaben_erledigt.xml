@@ -241,13 +241,24 @@
         app:layout_constraintRight_toRightOf="parent"/>
 
     <Button
+        android:id="@+id/ButtonBearbeiten2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginNormal"
+        android:text="Bearbeiten"
+        android:onClick="change2"
+        app:layout_constraintTop_toBottomOf="@id/ButtonNichtErledigt"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
         android:id="@+id/ButtonLoeschen2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginNormal"
         android:text="Löschen"
         android:onClick="delete2"
-        app:layout_constraintTop_toBottomOf="@id/ButtonNichtErledigt"
+        app:layout_constraintTop_toBottomOf="@id/ButtonBearbeiten2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
 
