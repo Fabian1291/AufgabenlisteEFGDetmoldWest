@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbarAufgaben"
+        android:id="@+id/appbarAufgabenBearbeiten"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbarAufgaben"
+            android:id="@+id/toolbarAufgabenBearbeiten"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
@@ -28,5 +28,70 @@
             app:popupTheme="@style/Theme.AppCompat.Light" />
 
     </android.support.design.widget.AppBarLayout>
+
+    <EditText
+        android:id="@+id/editTextAufgabeBearbeiten"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintTop_toBottomOf="@+id/appbarAufgabenBearbeiten"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/marginNormal"
+        android:hint="Aufgabe"
+        android:textColorHint="@color/grau"/>
+
+    <TextView
+        android:id="@+id/textViewPrioBearbeiten"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAufgabeBearbeiten"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/marginNormal"
+        android:text=" Priorität: "
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginNormal"
+        android:entries="@array/Spinner_Prioritaet"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextAufgabeBearbeiten"
+        app:layout_constraintLeft_toRightOf="@id/textViewPrioBearbeiten"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editTextOrtBearbeiten"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPrioBearbeiten"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/marginNormal"
+        android:hint="Ort"
+        android:textColorHint="@color/grau"/>
+
+    <EditText
+        android:id="@+id/editTextBeschreigungBearbeiten"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextOrtBearbeiten"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/marginNormal"
+        android:hint="Beschreibung"
+        android:textColorHint="@color/grau"/>
+
+    <EditText
+        android:id="@+id/editTextNameBearbeiten"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBeschreigungBearbeiten"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_margin="@dimen/marginNormal"
+        android:hint="Name"
+        android:textColorHint="@color/grau"/>
 
 </android.support.constraint.ConstraintLayout>
