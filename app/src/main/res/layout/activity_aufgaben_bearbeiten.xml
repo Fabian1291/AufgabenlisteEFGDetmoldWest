@@ -100,7 +100,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginNormal"
         android:text="Änderung Übernehmen"
-        android:onClick="delete"
+        android:onClick="changesubmit"
         app:layout_constraintTop_toBottomOf="@id/editTextNameBearbeiten"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"/>
