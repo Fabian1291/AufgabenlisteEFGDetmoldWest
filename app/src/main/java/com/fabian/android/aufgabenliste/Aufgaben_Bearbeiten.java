@@ -14,6 +14,9 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         super.onCreate(savedInstancesState);
         setContentView(R.layout.activity_aufgaben_bearbeiten);
 
+        Intent intent = getIntent();
+        long i = intent.getExtras().getLong("id");
+
         toolbar = (Toolbar) findViewById(R.id.toolbarAufgaben);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Aufgabe Bearbeiten");
