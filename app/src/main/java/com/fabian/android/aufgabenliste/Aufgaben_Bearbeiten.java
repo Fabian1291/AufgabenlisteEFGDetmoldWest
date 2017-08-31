@@ -57,9 +57,6 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         spinner.setSelection(spinneritem);
 
-        TextView prioritaet = (TextView) findViewById(R.id.textViewPrioBearbeiten);
-        prioritaet.setText(Prioritaet);
-
         String Ort = AufgabenlisteDatabase.getInstance(this).getOrt(i);
 
         EditText ort = (EditText) findViewById(R.id.editTextOrtBearbeiten);
