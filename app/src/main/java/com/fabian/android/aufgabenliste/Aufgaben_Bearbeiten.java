@@ -2,11 +2,13 @@ package com.fabian.android.aufgabenliste;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.accessibility.AccessibilityManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
 
@@ -49,7 +51,11 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         else if (Prioritaet.equals ("5-dringend"))
             spinneritem = 5;
 
-        //spinner.setSelection(spinneritem);
+        //zum debuggen
+        String spinneritem2 = String.valueOf(spinneritem);
+        Toast.makeText(this, spinneritem2, Toast.LENGTH_LONG).show();
+
+        spinner.setSelection(1);
 
         TextView prioritaet = (TextView) findViewById(R.id.textViewPrioBearbeiten);
         prioritaet.setText(Prioritaet);
