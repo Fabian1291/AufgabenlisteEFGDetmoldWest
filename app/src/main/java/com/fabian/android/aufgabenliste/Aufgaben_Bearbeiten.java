@@ -51,11 +51,11 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         else if (Prioritaet.equals ("5-dringend"))
             spinneritem = 5;
 
-        //zum debuggen
+        /*zum debuggen
         String spinneritem2 = String.valueOf(spinneritem);
-        Toast.makeText(this, spinneritem2, Toast.LENGTH_LONG).show();
+        Toast.makeText(this, spinneritem2, Toast.LENGTH_LONG).show();*/
 
-        spinner.setSelection(2);
+        spinner.setSelection(spinneritem);
 
         TextView prioritaet = (TextView) findViewById(R.id.textViewPrioBearbeiten);
         prioritaet.setText(Prioritaet);
