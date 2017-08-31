@@ -131,4 +131,16 @@ public class Aufgaben extends AppCompatActivity
 
         startActivity (intentBearbeiten);
     }
+
+    public void change2 (View view)
+    {
+        Intent intent = getIntent ();
+        long i = intent.getExtras ().getLong ("id");
+
+        Intent intentBearbeiten = new Intent (this, Aufgaben_Erledigt_Bearbeiten.class);
+
+        intentBearbeiten.putExtra ("id", i);
+
+        startActivity (intentBearbeiten);
+    }
 }
