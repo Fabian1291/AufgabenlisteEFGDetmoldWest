@@ -49,9 +49,9 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         else if (Prioritaet.equals ("5-dringend"))
             spinneritem = 5;
 
-        spinner.setSelection(spinneritem);
+        //spinner.setSelection(spinneritem);
 
-        TextView prioritaet = (TextView) findViewById(R.id.textViewPrioritaet1);
+        TextView prioritaet = (TextView) findViewById(R.id.textViewPrioBearbeiten);
         prioritaet.setText(Prioritaet);
 
         String Ort = AufgabenlisteDatabase.getInstance(this).getOrt(i);
@@ -68,5 +68,10 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         EditText ersteller = (EditText) findViewById(R.id.editTextNameBearbeiten);
         ersteller.setText(Ersteller);
+    }
+
+    public void changesubmit ()
+    {
+
     }
 }
