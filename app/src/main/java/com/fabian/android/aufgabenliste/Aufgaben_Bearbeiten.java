@@ -37,7 +37,7 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         aufgabe.setText(Aufgabe);
 
         String Prioritaet = AufgabenlisteDatabase.getInstance(this).getPrioritaet(i);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner = (Spinner) findViewById(R.id.spinnerBearbeiten);
         if (Prioritaet.equals ("0-sehr niedrig"))
             spinneritem = 0;
         else if (Prioritaet.equals ("1-niedrig"))
@@ -55,7 +55,7 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         String spinneritem2 = String.valueOf(spinneritem);
         Toast.makeText(this, spinneritem2, Toast.LENGTH_LONG).show();
 
-        spinner.setSelection(1);
+        spinner.setSelection(2);
 
         TextView prioritaet = (TextView) findViewById(R.id.textViewPrioBearbeiten);
         prioritaet.setText(Prioritaet);
