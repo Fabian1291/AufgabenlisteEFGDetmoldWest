@@ -23,7 +23,7 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         long i = intent.getExtras().getLong("id");
         int spinneritem = 0;
 
-        toolbar = (Toolbar) findViewById(R.id.toolbarAufgaben);
+        toolbar = (Toolbar) findViewById(R.id.toolbarAufgabenBearbeiten);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Aufgabe Bearbeiten");
 
