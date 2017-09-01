@@ -73,6 +73,21 @@ public class Aufgaben extends AppCompatActivity
 
         TextView ersteller = (TextView) findViewById(R.id.textViewErsteller1);
         ersteller.setText(Ersteller);
+
+        String Bearbeiter = AufgabenlisteDatabase.getInstance(this).getBearbeiter(i);
+
+        TextView bearbeiter = (TextView) findViewById(R.id.textViewBearbeiter1);
+        bearbeiter.setText(Bearbeiter);
+
+        String DatumBearbeitet = AufgabenlisteDatabase.getInstance(this).getDatumBearbeitet(i);
+
+        TextView datumBearbeitet = (TextView) findViewById(R.id.textViewDatumBearbeitet1);
+        datumBearbeitet.setText(DatumBearbeitet);
+
+        String UhrzeitBearbeitet = AufgabenlisteDatabase.getInstance(this).getUhrzeitBearbeitet(i);
+
+        TextView uhrzeitBearbeitet = (TextView) findViewById(R.id.textViewUhrzeitBearbeitet1);
+        uhrzeitBearbeitet.setText(UhrzeitBearbeitet);
     }
 
     public void update (View view)

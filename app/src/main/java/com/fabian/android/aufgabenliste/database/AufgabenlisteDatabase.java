@@ -383,4 +383,46 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
 
         return Aufgabe;
     }
+
+    public String getBearbeiter (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{BEARBEITER_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getDatumBearbeitet (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{DATUM_BEARBEITET_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
+
+    public String getUhrzeitBearbeitet (long Id) {
+
+        SQLiteDatabase database = this.getReadableDatabase();
+        Cursor cursor = database.query (TABLE_NAME, new String[]{UHRZEIT_BEARBEITET_COLUMN}, null, null, null, null, null);
+        int id = (int) Id;
+        cursor.move(id);
+
+        String Aufgabe = cursor.getString(0);
+
+        database.close();
+
+        return Aufgabe;
+    }
 }
