@@ -79,7 +79,7 @@ public class Hinzufuegen extends AppCompatActivity
 
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Hinzufuegen.this);
 
-        database.createAufgabe(new Aufgabe(Aufgabe, reportDate, reportTime, Ort, Ersteller, Prioritaet, Beschreibung, 0, null, null, null));
+        database.createAufgabe(new Aufgabe(Aufgabe, reportDate, reportTime, Ort, Ersteller, Prioritaet, Beschreibung, 0, null, null, null, null, null, null));
 
         startActivity(intent);
     }

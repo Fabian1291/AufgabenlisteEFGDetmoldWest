@@ -102,8 +102,6 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         EditText editTextBearbeiter = (EditText) findViewById (R.id.editTextBearbeiterBearbeiten);
         String Bearbeiter = editTextBearbeiter.getText().toString();
 
-        String Erlediger = "";
-
         if (Bearbeiter.length() == 0)
         {
             Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
@@ -120,7 +118,7 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben_Bearbeiten.this);
 
-        database.updateAufgabeBearbeiten(i, Aufgabe, Ort, Ersteller, Prioritaet, Beschreibung, Erlediger, reportDate, reportTime, Bearbeiter);
+        database.updateAufgabeBearbeiten(i, Aufgabe, Ort, Ersteller, Prioritaet, Beschreibung, null, reportDate, reportTime, Bearbeiter);
 
         startActivity(intentErledigt);
     }
