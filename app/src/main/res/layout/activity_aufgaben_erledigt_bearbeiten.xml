@@ -87,7 +87,7 @@
                 android:textColorHint="@color/grau"/>
 
             <EditText
-                android:id="@+id/editTextBeschreigungErledigtBearbeiten"
+                android:id="@+id/editTextBeschreibungErledigtBearbeiten"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
                 app:layout_constraintTop_toBottomOf="@+id/editTextOrtErledigtBearbeiten"
@@ -101,7 +101,7 @@
                 android:id="@+id/editTextNameErledigtBearbeiten"
                 android:layout_width="0dp"
                 android:layout_height="44dp"
-                app:layout_constraintTop_toBottomOf="@+id/editTextBeschreigungErledigtBearbeiten"
+                app:layout_constraintTop_toBottomOf="@+id/editTextBeschreibungErledigtBearbeiten"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_margin="@dimen/marginNormal"

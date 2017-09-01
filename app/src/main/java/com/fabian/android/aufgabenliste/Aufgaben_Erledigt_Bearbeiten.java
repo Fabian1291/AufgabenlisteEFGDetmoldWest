@@ -4,10 +4,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Aufgaben_Erledigt_Bearbeiten extends AppCompatActivity
 {
@@ -61,7 +68,7 @@ public class Aufgaben_Erledigt_Bearbeiten extends AppCompatActivity
 
         String Beschreibung = AufgabenlisteDatabase.getInstance(this).getBeschreibung(i);
 
-        EditText beschreibung = (EditText) findViewById(R.id.editTextBeschreigungErledigtBearbeiten);
+        EditText beschreibung = (EditText) findViewById(R.id.editTextBeschreibungErledigtBearbeiten);
         beschreibung.setText(Beschreibung);
 
         String Ersteller = AufgabenlisteDatabase.getInstance(this).getErsteller(i);
@@ -75,8 +82,75 @@ public class Aufgaben_Erledigt_Bearbeiten extends AppCompatActivity
         erlediger.setText(Erlediger);
     }
 
-    public void changesubmit ()
+    public void changesubmit (View view)
     {
+        Intent intent = getIntent();
+        long i = intent.getExtras().getLong("id");
 
+        Intent intentchange = new Intent(this, MainActivity.class);
+
+        EditText editTextAufgabe = (EditText) findViewById (R.id.editTextAufgabeErledigtBearbeiten);
+        String Aufgabe = editTextAufgabe.getText().toString();
+
+        EditText editTextOrt = (EditText) findViewById (R.id.editTextOrtErledigtBearbeiten);
+        String Ort = editTextOrt.getText().toString();
+
+        EditText editTextErsteller = (EditText) findViewById (R.id.editTextNameErledigtBearbeiten);
+        String Ersteller = editTextErsteller.getText().toString();
+
+        String Prioritaet = AufgabenlisteDatabase.getInstance(this).getPrioritaet(i);
+
+        EditText editTextBeschreibung = (EditText) findViewById (R.id.editTextBeschreibungErledigtBearbeiten);
+        String Beschreibung = editTextBeschreibung.getText().toString();
+
+        EditText editTextErlediger = (EditText) findViewById (R.id.editTextNameErledigerErledigtBearbeiten);
+        String Erlediger = editTextErlediger.getText().toString();
+
+        EditText editTextBearbeiter = (EditText) findViewById (R.id.editTextBearbeiterBearbeiten);
+        String Bearbeiter = editTextBearbeiter.getText().toString();
+
+        if (Aufgabe.length() == 0)
+        {
+            Toast.makeText(this,"Das Feld 'Aufgabe' darf nicht leer sein", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (Ort.length() == 0)
+        {
+            Toast.makeText(this,"Das Feld 'Ort' darf nicht leer sein", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (Ersteller.length() == 0)
+        {
+            Toast.makeText(this,"Das Feld 'Erstellt von' darf nicht leer sein", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (Erlediger.length() == 0)
+        {
+            Toast.makeText(this,"Das Feld 'Erledigt von' darf nicht leer sein", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (Bearbeiter.length() == 0)
+        {
+            Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        Date today = Calendar.getInstance().getTime();
+        String reportDate = df.format(today);
+
+        DateFormat df1 = new SimpleDateFormat("HH:mm:ss");
+        Date today1 = Calendar.getInstance().getTime();
+        String reportTime = df1.format(today1);
+
+        AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben_Erledigt_Bearbeiten.this);
+
+        database.updateAufgabeBearbeiten(i, Aufgabe, Ort, Ersteller, Prioritaet, Beschreibung, Erlediger, reportDate, reportTime, Bearbeiter);
+
+        startActivity(intentchange);
     }
 }
