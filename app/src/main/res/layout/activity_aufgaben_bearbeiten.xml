@@ -51,7 +51,9 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 android:layout_margin="@dimen/marginNormal"
                 android:hint="Aufgabe"
-                android:textColorHint="@color/grau"/>
+                android:textColorHint="@color/grau"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp" />
 
             <TextView
                 android:id="@+id/textViewPrioBearbeiten"
