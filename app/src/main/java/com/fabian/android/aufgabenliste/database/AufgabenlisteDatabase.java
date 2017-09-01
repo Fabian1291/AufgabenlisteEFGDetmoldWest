@@ -16,7 +16,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public static AufgabenlisteDatabase INSTANCE = null;
 
     private static final String DB_NAME = "AUFGABENLISTE";
-    private static final int VERSION = 7;
+    private static final int VERSION = 8;
     private static final String TABLE_NAME = "Aufgabenliste";
 
     public static final String ID_COLUMN = "_id";
@@ -54,7 +54,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
                 UHRZEIT_COLUMN + " TEXT, " +
                 ORT_COLUMN + " TEXT, " +
                 ERSTELLER_COLUMN + " TEXT, " +
-                PRIORITAET_COLUMN + " TEXT, " +
+                PRIORITAET_COLUMN + " TEXT, " + //TODO: in integer ändern
                 BESCHREIBUNG_COLUMN + " TEXT, " +
                 ERLEDIGT_COLUMN + " INTEGER DEFAULT NULL, " +
                 ERLEDIGER_COLUMN + " TEXT, " +

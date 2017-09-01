@@ -101,11 +101,11 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         String Erlediger = "";
 
-        if (Erlediger.length() == 0)
+        /*if (Erlediger.length() == 0)
         {
             Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
             return;
-        }
+        }*/
 
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date today = Calendar.getInstance().getTime();
