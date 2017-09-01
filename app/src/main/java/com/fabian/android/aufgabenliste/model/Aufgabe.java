@@ -14,8 +14,11 @@ public class Aufgabe
     private String Erlediger;
     private String DatumErledigt;
     private String UhrzeitErldigt;
+    private String DatumBearbeitet;
+    private String UhrzeitBearbeitet;
+    private String Bearbeiter;
 
-    public Aufgabe (String Aufgabe, String Datum, String Uhrzeit, String Ort, String Ersteller, String Prioritaet, String Beschreibung, int Erledigt, String Erlediger, String DatumErledigt, String UhrzeitErledigt)
+    public Aufgabe (String Aufgabe, String Datum, String Uhrzeit, String Ort, String Ersteller, String Prioritaet, String Beschreibung, int Erledigt, String Erlediger, String DatumErledigt, String UhrzeitErledigt, String DatumBearbeitet, String UhrzeitBearbeitet, String Bearbeiter)
     {
         this.Aufgabe = Aufgabe;
         this.Datum = Datum;
@@ -28,6 +31,9 @@ public class Aufgabe
         this.Erlediger = Erlediger;
         this.DatumErledigt = DatumErledigt;
         this.UhrzeitErldigt = UhrzeitErledigt;
+        this.DatumBearbeitet = DatumBearbeitet;
+        this.UhrzeitBearbeitet = UhrzeitBearbeitet;
+        this.Bearbeiter = Bearbeiter;
     }
 
     public long getId() {
@@ -124,5 +130,29 @@ public class Aufgabe
 
     public void setUhrzeitErldigt(String uhrzeitErldigt) {
         UhrzeitErldigt = uhrzeitErldigt;
+    }
+
+    public String getDatumBearbeitet() {
+        return DatumBearbeitet;
+    }
+
+    public void setDatumBearbeitet(String datumBearbeitet) {
+        DatumBearbeitet = datumBearbeitet;
+    }
+
+    public String getUhrzeitBearbeitet() {
+        return UhrzeitBearbeitet;
+    }
+
+    public void setUhrzeitBearbeitet(String uhrzeitBearbeitet) {
+        UhrzeitBearbeitet = uhrzeitBearbeitet;
+    }
+
+    public String getBearbeiter() {
+        return Bearbeiter;
+    }
+
+    public void setBearbeiter(String bearbeiter) {
+        Bearbeiter = bearbeiter;
     }
 }

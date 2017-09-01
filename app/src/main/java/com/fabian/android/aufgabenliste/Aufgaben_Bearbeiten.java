@@ -99,13 +99,16 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         EditText editTextBeschreibung = (EditText) findViewById (R.id.editTextBeschreibungBearbeiten);
         String Beschreibung = editTextBeschreibung.getText().toString();
 
+        EditText editTextBearbeiter = (EditText) findViewById (R.id.editTextBearbeiterBearbeiten);
+        String Bearbeiter = editTextBearbeiter.getText().toString();
+
         String Erlediger = "";
 
-        /*if (Erlediger.length() == 0)
+        if (Bearbeiter.length() == 0)
         {
             Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
             return;
-        }*/
+        }
 
         DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
         Date today = Calendar.getInstance().getTime();
@@ -117,7 +120,7 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben_Bearbeiten.this);
 
-        database.updateAufgabeBearbeiten(i, Aufgabe, Ort, Ersteller, Prioritaet, Beschreibung, Erlediger);
+        database.updateAufgabeBearbeiten(i, Aufgabe, Ort, Ersteller, Prioritaet, Beschreibung, Erlediger, reportDate, reportTime, Bearbeiter);
 
         startActivity(intentErledigt);
     }

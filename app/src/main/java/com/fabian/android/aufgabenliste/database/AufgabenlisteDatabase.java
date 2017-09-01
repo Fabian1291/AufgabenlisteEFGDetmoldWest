@@ -31,6 +31,9 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public static final String ERLEDIGER_COLUMN = "Erlediger";
     public static final String DATUM_ERLEDIGT_COLUMN = "DatumErledigt";
     public static final String UHRZEIT_ERLEDIGT_COLUMN = "UhrzeitErledigt";
+    public static final String DATUM_BEARBEITET_COLUMN = "DatumBearbeitet";
+    public static final String UHRZEIT_BEARBEITET_COLUMN = "UhrzeitBearbeitet";
+    public static final String BEARBEITER_COLUMN = "Bearbeiter";
 
     private AufgabenlisteDatabase (final Context context) {super(context, DB_NAME, null, VERSION);}
 
@@ -59,7 +62,10 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
                 ERLEDIGT_COLUMN + " INTEGER DEFAULT NULL, " +
                 ERLEDIGER_COLUMN + " TEXT, " +
                 DATUM_ERLEDIGT_COLUMN + " TEXT, " +
-                UHRZEIT_ERLEDIGT_COLUMN + " TEXT )";
+                UHRZEIT_ERLEDIGT_COLUMN + " TEXT, " +
+                DATUM_BEARBEITET_COLUMN + " TEXT, " +
+                UHRZEIT_BEARBEITET_COLUMN + " TEXT, " +
+                BESCHREIBUNG_COLUMN + " TEXT )";
 
         sqLiteDatabase.execSQL (createQuery);
     }
@@ -89,6 +95,9 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         values.put (ERLEDIGER_COLUMN, aufgabe.getErlediger ());
         values.put (DATUM_ERLEDIGT_COLUMN, aufgabe.getDatumErledigt ());
         values.put (UHRZEIT_ERLEDIGT_COLUMN, aufgabe.getUhrzeitErldigt());
+        values.put (DATUM_BEARBEITET_COLUMN, aufgabe.getDatumBearbeitet ());
+        values.put (UHRZEIT_BEARBEITET_COLUMN, aufgabe.getUhrzeitBearbeitet ());
+        values.put (BEARBEITER_COLUMN, aufgabe.getBearbeiter ());
 
         long newId = database.insert (TABLE_NAME, null, values);
 
@@ -100,7 +109,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
     public Aufgabe readAufgabe (final long id)
     {
         SQLiteDatabase database = this.getReadableDatabase();
-        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, UHRZEIT_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN, ERLEDIGT_COLUMN, ERLEDIGER_COLUMN, DATUM_ERLEDIGT_COLUMN, UHRZEIT_ERLEDIGT_COLUMN},ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
+        Cursor cursor = database.query(TABLE_NAME, new String[]{ID_COLUMN, AUFGABE_COLUMN, DATUM_COLUMN, UHRZEIT_COLUMN, ORT_COLUMN, ERSTELLER_COLUMN, PRIORITAET_COLUMN, BESCHREIBUNG_COLUMN, ERLEDIGT_COLUMN, ERLEDIGER_COLUMN, DATUM_ERLEDIGT_COLUMN, UHRZEIT_ERLEDIGT_COLUMN, DATUM_BEARBEITET_COLUMN, UHRZEIT_BEARBEITET_COLUMN, BEARBEITER_COLUMN},ID_COLUMN + " = ?", new String[]{String.valueOf(id)}, null, null, null);
 
         Aufgabe aufgabe = null;
 
@@ -117,7 +126,10 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
                     cursor.getInt (cursor.getColumnIndex (ERLEDIGT_COLUMN)),
                     cursor.getString (cursor.getColumnIndex (ERLEDIGER_COLUMN)),
                     cursor.getString (cursor.getColumnIndex (DATUM_ERLEDIGT_COLUMN)),
-                    cursor.getString (cursor.getColumnIndex (UHRZEIT_ERLEDIGT_COLUMN)));
+                    cursor.getString (cursor.getColumnIndex (UHRZEIT_ERLEDIGT_COLUMN)),
+                    cursor.getString (cursor.getColumnIndex (DATUM_BEARBEITET_COLUMN)),
+                    cursor.getString (cursor.getColumnIndex (UHRZEIT_BEARBEITET_COLUMN)),
+                    cursor.getString (cursor.getColumnIndex (BEARBEITER_COLUMN)));
             aufgabe.setId(cursor.getLong(cursor.getColumnIndex (ID_COLUMN)));
         }
 
@@ -142,7 +154,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         database.close();
     }
 
-    public void updateAufgabeBearbeiten (long Id, String Aufgabe, String Ort, String Ersteller, String Prioritaet, String Beschreibung, String Erlediger)
+    public void updateAufgabeBearbeiten (long Id, String Aufgabe, String Ort, String Ersteller, String Prioritaet, String Beschreibung, String Erlediger, String DatumBearbeitet, String UhrzeitBearbeitet, String Bearbeiter)
     {
         int id = (int) Id;
 
@@ -154,6 +166,9 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         values.put (PRIORITAET_COLUMN, Prioritaet);
         values.put (BESCHREIBUNG_COLUMN, Beschreibung);
         values.put (ERLEDIGER_COLUMN, Erlediger);
+        values.put (DATUM_BEARBEITET_COLUMN, DatumBearbeitet);
+        values.put (UHRZEIT_BEARBEITET_COLUMN, UhrzeitBearbeitet);
+        values.put (BEARBEITER_COLUMN, Bearbeiter);
 
         database.update(TABLE_NAME, values, "_id = " + id, null);
 
