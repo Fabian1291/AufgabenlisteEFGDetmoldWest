@@ -29,238 +29,256 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:id="@+id/textViewAufgabe_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Aufgabe: "
-        app:layout_constraintTop_toBottomOf="@+id/appbarAufgabenErledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
-
-    <TextView
-        android:id="@+id/textViewAufgabe1_erledigt"
+    <ScrollView
+        android:id="@+id/scollview"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/appbarAufgabenErledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewAufgabe_erledigt"
+        android:layout_height="0dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
-
-    <TextView
-        android:id="@+id/textViewDatum_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Datum: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe1_erledigt"
+        app:layout_constraintTop_toBottomOf="@id/appbarAufgabenErledigt"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <TextView
-        android:id="@+id/textViewDatum1_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe1_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewDatum_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textViewUhrzeit_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Uhrzeit: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum1_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewAufgabe_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Aufgabe: "
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewUhrzeit1_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum1_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewUhrzeit_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewAufgabe1_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/textViewAufgabe_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewAufgabe_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="0dp"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewPrioritaet_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Priorität: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit1_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewDatum_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Datum: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe1_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewPrioritaet1_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit1_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewDatum1_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe1_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewDatum_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewOrt_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Ort: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet1_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewUhrzeit_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Uhrzeit: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewDatum1_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewOrt1_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet1_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewOrt_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewUhrzeit1_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDatum1_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewUhrzeit_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewBeschreibung_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Beschreibung: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewOrt1_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewPrioritaet_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Priorität: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit1_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewBeschreibung1_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewOrt1_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewBeschreibung_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewPrioritaet1_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit1_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewErsteller_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Erstellt von: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung1_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewOrt_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Ort: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet1_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewErsteller1_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung1_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewErsteller_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewOrt1_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet1_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewOrt_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewErlediger_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Erledigt von: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewErsteller1_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewBeschreibung_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Beschreibung: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewOrt1_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewErlediger1_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewErsteller1_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewErlediger_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewBeschreibung1_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOrt1_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewBeschreibung_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewDatum2_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Datum: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewErlediger1_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewErsteller_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Erstellt von: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung1_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewDatum3_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewErlediger1_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewDatum2_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewErsteller1_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung1_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewErsteller_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewUhreit2_erledigt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Uhrzeit: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum3_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewErlediger_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Erledigt von: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewErsteller1_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewUhrzeit3_erledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum3_erledigt"
-        app:layout_constraintLeft_toRightOf="@+id/textViewUhreit2_erledigt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewErlediger1_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewErsteller1_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewErlediger_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <Button
-        android:id="@+id/ButtonNichtErledigt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginNormal"
-        android:text="Doch nicht erledigt"
-        android:onClick="nichterledigt"
-        app:layout_constraintTop_toBottomOf="@id/textViewUhrzeit3_erledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                android:id="@+id/textViewDatum2_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Datum: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewErlediger1_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <Button
-        android:id="@+id/ButtonBearbeiten2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginNormal"
-        android:text="Bearbeiten"
-        android:onClick="change2"
-        app:layout_constraintTop_toBottomOf="@id/ButtonNichtErledigt"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                android:id="@+id/textViewDatum3_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewErlediger1_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewDatum2_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <Button
-        android:id="@+id/ButtonLoeschen2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginNormal"
-        android:text="Löschen"
-        android:onClick="delete2"
-        app:layout_constraintTop_toBottomOf="@id/ButtonBearbeiten2"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                android:id="@+id/textViewUhreit2_erledigt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Uhrzeit: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewDatum3_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
+
+            <TextView
+                android:id="@+id/textViewUhrzeit3_erledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDatum3_erledigt"
+                app:layout_constraintLeft_toRightOf="@+id/textViewUhreit2_erledigt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
+
+            <Button
+                android:id="@+id/ButtonNichtErledigt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginNormal"
+                android:text="Doch nicht erledigt"
+                android:onClick="nichterledigt"
+                app:layout_constraintTop_toBottomOf="@id/textViewUhrzeit3_erledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <Button
+                android:id="@+id/ButtonBearbeiten2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginNormal"
+                android:text="Bearbeiten"
+                android:onClick="change2"
+                app:layout_constraintTop_toBottomOf="@id/ButtonNichtErledigt"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <Button
+                android:id="@+id/ButtonLoeschen2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginNormal"
+                android:text="Löschen"
+                android:onClick="delete2"
+                app:layout_constraintTop_toBottomOf="@id/ButtonBearbeiten2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
 
 </android.support.constraint.ConstraintLayout>

@@ -29,189 +29,208 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:id="@+id/textViewAufgabe"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Aufgabe: "
-        app:layout_constraintTop_toBottomOf="@+id/appbarAufgaben"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
-
-    <TextView
-        android:id="@+id/textViewAufgabe1"
+    <ScrollView
+        android:id="@+id/scollview"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/appbarAufgaben"
-        app:layout_constraintLeft_toRightOf="@+id/textViewAufgabe"
+        android:layout_height="0dp"
         app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
-
-    <TextView
-        android:id="@+id/textViewDatum"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Datum: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe1"
+        app:layout_constraintTop_toBottomOf="@id/appbarAufgaben"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <TextView
-        android:id="@+id/textViewDatum1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe1"
-        app:layout_constraintLeft_toRightOf="@+id/textViewDatum"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textViewUhrzeit"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Uhrzeit: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewAufgabe"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Aufgabe: "
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewUhrzeit1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDatum1"
-        app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewAufgabe1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@+id/textViewAufgabe"
+                app:layout_constraintLeft_toRightOf="@+id/textViewAufgabe"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_marginTop="0dp"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewPrioritaet"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Priorität: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewDatum"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Datum: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewPrioritaet1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit1"
-        app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewDatum1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewAufgabe1"
+                app:layout_constraintLeft_toRightOf="@+id/textViewDatum"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewOrt"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Ort: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewUhrzeit"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Uhrzeit: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewDatum1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewOrt1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet1"
-        app:layout_constraintLeft_toRightOf="@+id/textViewOrt"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewUhrzeit1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDatum1"
+                app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewBeschreibung"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Beschreibung: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewOrt1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewPrioritaet"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Priorität: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewBeschreibung1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewOrt1"
-        app:layout_constraintLeft_toRightOf="@+id/textViewBeschreibung"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewPrioritaet1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUhrzeit1"
+                app:layout_constraintLeft_toRightOf="@+id/textViewPrioritaet"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <TextView
-        android:id="@+id/textViewErsteller"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Erstellt von: "
-        app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewOrt"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Ort: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <TextView
-        android:id="@+id/textViewErsteller1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung1"
-        app:layout_constraintLeft_toRightOf="@+id/textViewErsteller"
-        app:layout_constraintRight_toRightOf="parent"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-        android:layout_margin="@dimen/marginNormal" />
+            <TextView
+                android:id="@+id/textViewOrt1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrioritaet1"
+                app:layout_constraintLeft_toRightOf="@+id/textViewOrt"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <EditText
-        android:id="@+id/editTextErlediger"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textViewErsteller1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:hint="Name"
-        android:textColorHint="@color/grau"
-        android:layout_margin="@dimen/marginNormal"/>
+            <TextView
+                android:id="@+id/textViewBeschreibung"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Beschreibung: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewOrt1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <Button
-        android:id="@+id/ButtonNeu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginNormal"
-        android:text="Erledigt"
-        android:onClick="update"
-        app:layout_constraintTop_toBottomOf="@id/editTextErlediger"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                android:id="@+id/textViewBeschreibung1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOrt1"
+                app:layout_constraintLeft_toRightOf="@+id/textViewBeschreibung"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
 
-    <Button
-        android:id="@+id/ButtonBearbeiten1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginNormal"
-        android:text="Bearbeiten"
-        android:onClick="change1"
-        app:layout_constraintTop_toBottomOf="@id/ButtonNeu"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                android:id="@+id/textViewErsteller"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Erstellt von: "
+                app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal"/>
 
-    <Button
-        android:id="@+id/ButtonLoeschen1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/marginNormal"
-        android:text="Löschen"
-        android:onClick="delete"
-        app:layout_constraintTop_toBottomOf="@id/ButtonBearbeiten1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"/>
+            <TextView
+                android:id="@+id/textViewErsteller1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewBeschreibung1"
+                app:layout_constraintLeft_toRightOf="@+id/textViewErsteller"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:layout_margin="@dimen/marginNormal" />
+
+            <EditText
+                android:id="@+id/editTextErlediger"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/textViewErsteller1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:hint="Name"
+                android:textColorHint="@color/grau"
+                android:layout_margin="@dimen/marginNormal"/>
+
+            <Button
+                android:id="@+id/ButtonNeu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginNormal"
+                android:text="Erledigt"
+                android:onClick="update"
+                app:layout_constraintTop_toBottomOf="@+id/editTextErlediger"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <Button
+                android:id="@+id/ButtonBearbeiten1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginNormal"
+                android:text="Bearbeiten"
+                android:onClick="change1"
+                app:layout_constraintTop_toBottomOf="@+id/ButtonNeu"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <Button
+                android:id="@+id/ButtonLoeschen1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/marginNormal"
+                android:text="Löschen"
+                android:onClick="delete"
+                app:layout_constraintTop_toBottomOf="@+id/ButtonBearbeiten1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
 
 
 </android.support.constraint.ConstraintLayout>
