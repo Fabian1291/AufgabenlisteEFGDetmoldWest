@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.view.accessibility.AccessibilityManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -78,12 +79,12 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         ersteller.setText(Ersteller);
     }
 
-    public void changesubmit ()
+    public void changesubmit (View view)
     {
         Intent intent = getIntent();
         long i = intent.getExtras().getLong("id");
 
-        Intent intentErledigt = new Intent(this, MainActivity.class);
+        Intent intentchange = new Intent(this, MainActivity.class);
 
         EditText editTextAufgabe = (EditText) findViewById (R.id.editTextAufgabeBearbeiten);
         String Aufgabe = editTextAufgabe.getText().toString();
@@ -120,6 +121,6 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         database.updateAufgabeBearbeiten(i, Aufgabe, Ort, Ersteller, Prioritaet, Beschreibung, null, reportDate, reportTime, Bearbeiter);
 
-        startActivity(intentErledigt);
+        startActivity(intentchange);
     }
 }

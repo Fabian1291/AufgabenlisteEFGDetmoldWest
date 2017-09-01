@@ -62,7 +62,8 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:layout_marginTop="0dp"
-                android:layout_margin="@dimen/marginNormal" />
+                android:layout_marginRight="@dimen/marginNormal"
+                android:layout_marginLeft="@dimen/marginNormal"/>
 
             <TextView
                 android:id="@+id/textViewDatum_erledigt"

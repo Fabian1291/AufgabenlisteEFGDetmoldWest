@@ -65,7 +65,7 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
                 UHRZEIT_ERLEDIGT_COLUMN + " TEXT, " +
                 DATUM_BEARBEITET_COLUMN + " TEXT, " +
                 UHRZEIT_BEARBEITET_COLUMN + " TEXT, " +
-                BESCHREIBUNG_COLUMN + " TEXT )";
+                BEARBEITER_COLUMN + " TEXT )";
 
         sqLiteDatabase.execSQL (createQuery);
     }
