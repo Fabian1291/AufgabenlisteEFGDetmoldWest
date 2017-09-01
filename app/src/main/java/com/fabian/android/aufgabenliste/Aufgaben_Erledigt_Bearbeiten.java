@@ -106,7 +106,7 @@ public class Aufgaben_Erledigt_Bearbeiten extends AppCompatActivity
         EditText editTextErlediger = (EditText) findViewById (R.id.editTextNameErledigerErledigtBearbeiten);
         String Erlediger = editTextErlediger.getText().toString();
 
-        EditText editTextBearbeiter = (EditText) findViewById (R.id.editTextBearbeiterBearbeiten);
+        EditText editTextBearbeiter = (EditText) findViewById (R.id.editTextBearbeiter2Bearbeiten);
         String Bearbeiter = editTextBearbeiter.getText().toString();
 
         if (Aufgabe.length() == 0)
