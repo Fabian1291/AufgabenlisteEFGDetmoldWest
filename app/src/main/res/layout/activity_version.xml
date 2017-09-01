@@ -68,6 +68,7 @@
         android:layout_marginStart="@dimen/marginNormal" />
 
     <TextView
+        android:id="@+id/github"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/marginNormal"
@@ -75,6 +76,16 @@
         android:text="Der Sourcecode ist seit Version 0.7.0-20 auf Github verfügbar. Der Link ist folgender: https://github.com/Fabian1291/AufgabenlisteEFGDetmoldWest"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/datum"
+        android:layout_marginStart="@dimen/marginNormal" />
+
+    <TextView
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/marginNormal"
+        android:layout_marginTop="@dimen/marginNormal"
+        android:text="Der Sourcecode steht unter der GNU GENERAL PUBLIC LICENSE Version 3."
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/github"
         android:layout_marginStart="@dimen/marginNormal" />
 
 
