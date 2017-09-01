@@ -103,6 +103,24 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
         EditText editTextBearbeiter = (EditText) findViewById (R.id.editTextBearbeiterBearbeiten);
         String Bearbeiter = editTextBearbeiter.getText().toString();
 
+        if (Aufgabe.length() == 0)
+        {
+            Toast.makeText(this,"Das Feld 'Aufgabe' darf nicht leer sein", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (Ort.length() == 0)
+        {
+            Toast.makeText(this,"Das Feld 'Ort' darf nicht leer sein", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        if (Ersteller.length() == 0)
+        {
+            Toast.makeText(this,"Das Feld 'Erstellt von' darf nicht leer sein", Toast.LENGTH_LONG).show();
+            return;
+        }
+
         if (Bearbeiter.length() == 0)
         {
             Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
