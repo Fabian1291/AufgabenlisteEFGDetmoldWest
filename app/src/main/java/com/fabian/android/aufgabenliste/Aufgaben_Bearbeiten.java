@@ -69,7 +69,7 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         String Beschreibung = AufgabenlisteDatabase.getInstance(this).getBeschreibung(i);
 
-        EditText beschreibung = (EditText) findViewById(R.id.editTextBeschreigungBearbeiten);
+        EditText beschreibung = (EditText) findViewById(R.id.editTextBeschreibungBearbeiten);
         beschreibung.setText(Beschreibung);
 
         String Ersteller = AufgabenlisteDatabase.getInstance(this).getErsteller(i);
@@ -85,8 +85,21 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         Intent intentErledigt = new Intent(this, MainActivity.class);
 
-        EditText editTextErlediger = (EditText) findViewById(R.id.editTextErlediger);
-        String Erlediger = editTextErlediger.getText().toString();
+        EditText editTextAufgabe = (EditText) findViewById (R.id.editTextAufgabeBearbeiten);
+        String Aufgabe = editTextAufgabe.getText().toString();
+
+        EditText editTextOrt = (EditText) findViewById (R.id.editTextOrtBearbeiten);
+        String Ort = editTextOrt.getText().toString();
+
+        EditText editTextErsteller = (EditText) findViewById (R.id.editTextNameBearbeiten);
+        String Ersteller = editTextErsteller.getText().toString();
+
+        String Prioritaet = AufgabenlisteDatabase.getInstance(this).getPrioritaet(i);
+
+        EditText editTextBeschreibung = (EditText) findViewById (R.id.editTextBeschreibungBearbeiten);
+        String Beschreibung = editTextBeschreibung.getText().toString();
+
+        String Erlediger = "";
 
         if (Erlediger.length() == 0)
         {
@@ -104,7 +117,7 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
         AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben_Bearbeiten.this);
 
-        database.updateAufgabe(i, Erlediger, reportDate, reportTime);
+        database.updateAufgabeBearbeiten(i, Aufgabe, Ort, Ersteller, Prioritaet, Beschreibung, Erlediger);
 
         startActivity(intentErledigt);
     }
