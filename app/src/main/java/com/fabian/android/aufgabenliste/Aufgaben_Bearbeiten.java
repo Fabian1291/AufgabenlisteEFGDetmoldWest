@@ -12,6 +12,11 @@ import android.widget.Toast;
 
 import com.fabian.android.aufgabenliste.database.AufgabenlisteDatabase;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Aufgaben_Bearbeiten extends AppCompatActivity
 {
     Toolbar toolbar;
@@ -75,6 +80,32 @@ public class Aufgaben_Bearbeiten extends AppCompatActivity
 
     public void changesubmit ()
     {
+        Intent intent = getIntent();
+        long i = intent.getExtras().getLong("id");
 
+        Intent intentErledigt = new Intent(this, MainActivity.class);
+
+        EditText editTextErlediger = (EditText) findViewById(R.id.editTextErlediger);
+        String Erlediger = editTextErlediger.getText().toString();
+
+        if (Erlediger.length() == 0)
+        {
+            Toast.makeText(this,"Bitte das Feld 'Name' ausfüllen", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        Date today = Calendar.getInstance().getTime();
+        String reportDate = df.format(today);
+
+        DateFormat df1 = new SimpleDateFormat("HH:mm:ss");
+        Date today1 = Calendar.getInstance().getTime();
+        String reportTime = df1.format(today1);
+
+        AufgabenlisteDatabase database = AufgabenlisteDatabase.getInstance(Aufgaben_Bearbeiten.this);
+
+        database.updateAufgabe(i, Erlediger, reportDate, reportTime);
+
+        startActivity(intentErledigt);
     }
 }

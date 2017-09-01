@@ -142,6 +142,24 @@ public class AufgabenlisteDatabase extends SQLiteOpenHelper
         database.close();
     }
 
+    public void updateAufgabeBearbeiten (long Id, String Aufgabe, String Ort, String Ersteller, String Prioritaet, String Beschreibung, String Erlediger)
+    {
+        int id = (int) Id;
+
+        SQLiteDatabase database = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put (AUFGABE_COLUMN, Aufgabe);
+        values.put (ORT_COLUMN, Ort);
+        values.put (ERSTELLER_COLUMN, Ersteller);
+        values.put (PRIORITAET_COLUMN, Prioritaet);
+        values.put (BESCHREIBUNG_COLUMN, Beschreibung);
+        values.put (ERLEDIGER_COLUMN, Erlediger);
+
+        database.update(TABLE_NAME, values, "_id = " + id, null);
+
+        database.close();
+    }
+
     public void updateAufgabeNichtErledigt (long Id)
     {
         int id = (int) Id;
